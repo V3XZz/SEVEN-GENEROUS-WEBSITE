@@ -1,4 +1,4 @@
-# SEVEN GENEROUS WEBSITE(
+# SEVEN GENEROUS WEBSITE(https://seven-generous-7g-web.vercel.app/)
 
 ## SEVEN GENEROUS
 adalah website statis sederhana yang dibuat dengan HTML, CSS, dan JavaScript. Proyek ini bertujuan untuk menampilkan konten informatif atau pribadi dengan desain menarik dan responsif.
