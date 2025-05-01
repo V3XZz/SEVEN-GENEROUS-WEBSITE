@@ -9,7 +9,7 @@ adalah website statis sederhana yang dibuat dengan HTML, CSS, dan JavaScript. Pr
 - JavaScript aktif untuk fitur interaktif
 
 ## CREDIT
-Website ini dibuat oleh **Vex (V3XZz) /Arfii** dengan semangat belajar dan eksplorasi teknologi web.
+Website ini dibuat oleh ***Vex / Arfii*** dengan semangat belajar dan eksplorasi teknologi web.
 
 
 > Website ini adalah bagian dari eksperimen dan pembelajaran.  
