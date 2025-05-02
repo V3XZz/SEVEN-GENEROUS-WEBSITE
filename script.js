@@ -1,3 +1,18 @@
+window.onload = function() {
+setTimeout(function() {
+window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+}, 50);
+};
+
+// Efek Fade Out Load
+
+window.onload = () => {
+// loader fade out
+setTimeout(() => {
+document.getElementById('loader').classList.add('fade-out');
+}, 1000);  // fade out
+// Script Load Web
+
 	//Galeri
  // Menampilkan galeri
 document.getElementById("openGallery").onclick = function () {
