@@ -81,18 +81,21 @@ document.querySelector(".close-lightbox").addEventListener("click", () => {
 	// Set Window Di-Atas
 
 window.onload = function() {
-setTimeout(function() {
-window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-}, 50);
+    // Fungsi untuk scroll ke atas
+    setTimeout(function() {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }, 50); 
+
+    // Fungsi untuk fade out loader dengan penyesuaian delay
+    setTimeout(() => {
+        const loader = document.getElementById('loader');
+        if (loader) {
+            loader.classList.add('fade-out');
+        } else {
+            console.error('Loader element not found!');
+        }
+    }, 500); // Penambahan delay agar lebih lama jika perlu
 };
-
-// Efek Fade Out Load
-
-window.onload = () => {
-// loader fade out
-setTimeout(() => {
-document.getElementById('loader').classList.add('fade-out');
-}, 1000);  // fade out
 // Script Load Web
 
 
