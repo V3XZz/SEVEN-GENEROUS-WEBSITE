@@ -13,6 +13,12 @@ document.getElementById('loader').classList.add('fade-out');
 }, 2000);  // fade out
 // Script Load Web
 
+// Sembunyikan loader setelah halaman selesai dimuat
+window.addEventListener("load", function () {
+  const loader = document.getElementById("loader");
+  loader.style.display = "none";
+});
+
 	//Galeri
  // Menampilkan galeri
 document.getElementById("openGallery").onclick = function () {
