@@ -4,25 +4,26 @@ window.addEventListener("load", function () {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }, 50);
 
-  // Efek fade out loader
+  // Loader fade out efek
   setTimeout(function () {
     const loader = document.getElementById("loader");
-    loader.classList.add("fade-out");
-
-    // Setelah animasi selesai, sembunyikan loader
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 500); // Sesuaikan dengan durasi transisi CSS jika ada
-  }, 2000); // Tunggu 2 detik sebelum mulai fade
-
+    if (loader) {
+      loader.classList.add("fade-out");  // Menambahkan kelas fade-out untuk efek
+      // Setelah animasi selesai, sembunyikan loader
+      setTimeout(() => {
+        loader.style.display = "none";  // Menyembunyikan loader
+      }, 500);  // Pastikan durasi disesuaikan dengan durasi transisi fade
+    }
+  }, 2000);  // Tunggu 2 detik sebelum mulai fade out loader
+  
   // Menampilkan galeri
   document.getElementById("openGallery").onclick = function () {
-    document.getElementById("fullscreenGallery").classList.add("show"); // Menambahkan kelas 'show' untuk efek membuka galeri
+    document.getElementById("fullscreenGallery").classList.add("show");  // Menampilkan galeri
   };
 
   // Menutup galeri
   document.getElementById("closeGallery").onclick = function () {
-    document.getElementById("fullscreenGallery").classList.remove("show"); // Menghapus kelas 'show' untuk menutup galeri
+    document.getElementById("fullscreenGallery").classList.remove("show");  // Menyembunyikan galeri
   };
 
   // Menampilkan lightbox saat gambar diklik
@@ -30,15 +31,15 @@ window.addEventListener("load", function () {
     img.addEventListener("click", () => {
       const lightbox = document.getElementById("lightbox");
       const lightboxImg = lightbox.querySelector("img");
-      lightboxImg.src = img.src; // Set src image lightbox dengan src image yang diklik
-      lightbox.style.display = "flex"; // Menampilkan lightbox
+      lightboxImg.src = img.src;  // Set src lightbox sesuai gambar yang diklik
+      lightbox.style.display = "block";  // Menampilkan lightbox
     });
   });
 
-  // Menutup lightbox
+  // Menutup lightbox saat klik tombol close
   document.querySelector(".close-lightbox").addEventListener("click", () => {
     const lightbox = document.getElementById("lightbox");
-    lightbox.style.display = "none"; // Menutup lightbox
+    lightbox.style.display = "none";  // Menutup lightbox
   });
 });
 
