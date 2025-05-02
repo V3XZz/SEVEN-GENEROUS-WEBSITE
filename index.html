@@ -94,9 +94,9 @@ header h1 {
   text-transform: uppercase;
   letter-spacing: 4px;
       margin-top: -30px;
-  color: #7e22ce; /* ungu gelap */
-  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
-  border: 2px solid #9333ea;
+  color: #9370DB; /* Ungu gelap yang lebih pekat */
+  text-shadow: none;
+  border: 2px solid #2E003E;
   padding: 5px 15px;
   border-radius: 10px;
   animation: glow 2s ease-in-out infinite alternate;
@@ -118,7 +118,8 @@ nav {
       justify-content: center;
       gap: 10px;
       overflow-x: auto;
-      padding: 5px 0;
+      padding: 10px 20px;
+      
       
     }
 nav::-webkit-scrollbar {
@@ -132,7 +133,7 @@ nav::-webkit-scrollbar-thumb {
 nav a {
       color: white;
       text-decoration: none;
-      font-size: 13px;
+      font-size: 17,3px;
       font-weight: bold;
       padding: 5px 10px;
       border-radius: 20px;
@@ -222,7 +223,7 @@ h2 {
 
 .icon-section {
       margin-right: 8px;
-      color: #c084fc;
+      color: #c084fc !important;
     }
 
 /* Blurbg latar section galeri */
@@ -234,19 +235,7 @@ h2 {
   margin-bottom: 30px;
 }
 
-/* Judul galeri */
-#galeri-section h2 {
-  font-size: 28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  color: #9333ea;
-  text-transform: uppercase;
-  font-family: 'Staatliches', sans-serif;
-  text-align: center;
-}
-  
+
 
 /* Galeri Tampilan 2x2 */
 .galeri-preview {
@@ -442,6 +431,10 @@ footer .social-media i:hover {
   margin-bottom: 100px;
 }
 
+#galeri-section {
+	margin-bottom: 100px;
+}
+
 #kontak {
   margin-bottom: 200px;
 }
@@ -569,7 +562,7 @@ footer .social-media i:hover {
 <!--Tampilan Luar Galeri-->
 <section id="galeri-section">
   <div class="blurbg">
-    <h2><i class="fas fa-camera" style="color: #9333ea;"></i>Galeri</h2>
+    <h2><i class="fas fa-camera" style="color: #c084fc; margin-right: 8px;"></i>Galeri</h2>
 
     <div class="galeri-preview">
       <img src="https://files.catbox.moe/rxqw9t.jpg" alt="Foto 1">
