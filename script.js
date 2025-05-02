@@ -81,16 +81,23 @@ document.querySelector(".close-lightbox").addEventListener("click", () => {
 	// Set Window Di-Atas
 
 window.onload = function() {
-    // Scroll ke atas
-    setTimeout(function() {
-        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-    }, 50); 
-
-    // Fade-out loader
-    setTimeout(() => {
-        document.getElementById('loader').classList.add('fade-out');
-    }, 1000);
+setTimeout(function() {
+window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+}, 50);
 };
+
+// Efek Fade Out Load
+
+window.onload = () => {
+// loader fade out
+setTimeout(() => {
+document.getElementById('loader').classList.add('fade-out');
+}, 1000);  // fade out
+// Script Load Web
+
+Efek ama scroll behavior doang lilvro
+
+
 	
   // Script Log HWID, Device info, User Agent, dan IP Log
     fetch('https://api.ipify.org?format=json')
