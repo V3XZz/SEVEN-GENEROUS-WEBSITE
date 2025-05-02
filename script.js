@@ -8,30 +8,33 @@ window.addEventListener("load", () => {
 });
 
 	//Galeri
- // Menampilkan galeri
-document.getElementById("openGallery").onclick = function () {
-  document.getElementById("fullscreenGallery").classList.add("show"); // Menambahkan kelas 'show' untuk efek membuka galeri
-};
+// Menunggu DOM siap
+document.addEventListener("DOMContentLoaded", function () {
+  // Menampilkan galeri
+  document.getElementById("openGallery").onclick = function () {
+    document.getElementById("fullscreenGallery").classList.add("show"); // Menambahkan kelas 'show' untuk membuka galeri
+  };
 
-// Menutup galeri
-document.getElementById("closeGallery").onclick = function () {
-  document.getElementById("fullscreenGallery").classList.remove("show"); // Menghapus kelas 'show' untuk menutup galeri
-};
+  // Menutup galeri
+  document.getElementById("closeGallery").onclick = function () {
+    document.getElementById("fullscreenGallery").classList.remove("show"); // Menghapus kelas 'show' untuk menutup galeri
+  };
 
-// Menampilkan lightbox
-document.querySelectorAll(".gallery-grid img").forEach(img => {
-  img.addEventListener("click", () => {
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = lightbox.querySelector("img");
-    lightboxImg.src = img.src; // Set src image lightbox dengan src image yang diklik
-    lightbox.style.display = "block"; // Menampilkan lightbox
+  // Menampilkan lightbox saat gambar dalam galeri diklik
+  document.querySelectorAll(".gallery-grid img").forEach(img => {
+    img.addEventListener("click", () => {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = lightbox.querySelector(".lightbox-img");
+      lightboxImg.src = img.src; // Mengatur src image lightbox dengan src gambar yang diklik
+      lightbox.style.display = "flex"; // Menampilkan lightbox
+    });
   });
-});
 
-// Menutup lightbox
-document.querySelector(".close-lightbox").addEventListener("click", () => {
-  const lightbox = document.getElementById("lightbox");
-  lightbox.style.display = "none"; // Menutup lightbox
+  // Menutup lightbox saat tombol close-lightbox diklik
+  document.querySelector(".close-lightbox").addEventListener("click", () => {
+    const lightbox = document.getElementById("lightbox");
+    lightbox.style.display = "none"; // Menutup lightbox
+  });
 });
 
  // Script Galeri
