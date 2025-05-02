@@ -95,8 +95,6 @@ document.getElementById('loader').classList.add('fade-out');
 }, 1000);  // fade out
 // Script Load Web
 
-Efek ama scroll behavior doang lilvro
-
 
 	
   // Script Log HWID, Device info, User Agent, dan IP Log
