@@ -27,13 +27,13 @@ document.getElementById("closeGallery").onclick = function () {
   document.getElementById("fullscreenGallery").classList.remove("show"); // Menghapus kelas 'show' untuk menutup galeri
 };
 
-// Menampilkan lightbox
+// Menampilkan lightbox saat gambar diklik
 document.querySelectorAll(".gallery-grid img").forEach(img => {
   img.addEventListener("click", () => {
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = lightbox.querySelector("img");
     lightboxImg.src = img.src; // Set src image lightbox dengan src image yang diklik
-    lightbox.style.display = "block"; // Menampilkan lightbox
+    lightbox.style.display = "flex"; // Menampilkan lightbox
   });
 });
 
