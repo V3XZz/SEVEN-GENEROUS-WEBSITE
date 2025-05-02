@@ -1,47 +1,31 @@
-window.addEventListener("load", function () {
-  // Scroll ke atas segera setelah load
-  setTimeout(function () {
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-  }, 50);
+// Loader + Galeri JS Fix
 
-  // Loader fade out efek
-  setTimeout(function () {
-    const loader = document.getElementById("loader");
-    if (loader) {
-      loader.classList.add("fade-out");  // Menambahkan kelas fade-out untuk efek
-      // Setelah animasi selesai, sembunyikan loader
-      setTimeout(() => {
-        loader.style.display = "none";  // Menyembunyikan loader
-      }, 500);  // Pastikan durasi disesuaikan dengan durasi transisi fade
-    }
-  }, 2000);  // Tunggu 2 detik sebelum mulai fade out loader
-  
-  // Menampilkan galeri
-  document.getElementById("openGallery").onclick = function () {
-    document.getElementById("fullscreenGallery").classList.add("show");  // Menampilkan galeri
-  };
+// Loader fade out setelah halaman selesai dimuat window.addEventListener("load", function () { // Scroll ke atas setTimeout(function () { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); }, 50);
 
-  // Menutup galeri
-  document.getElementById("closeGallery").onclick = function () {
-    document.getElementById("fullscreenGallery").classList.remove("show");  // Menyembunyikan galeri
-  };
+// Mulai fade out loader setTimeout(function () { const loader = document.getElementById("loader"); loader.classList.add("fade-out");
 
-  // Menampilkan lightbox saat gambar diklik
-  document.querySelectorAll(".gallery-grid img").forEach(img => {
-    img.addEventListener("click", () => {
-      const lightbox = document.getElementById("lightbox");
-      const lightboxImg = lightbox.querySelector("img");
-      lightboxImg.src = img.src;  // Set src lightbox sesuai gambar yang diklik
-      lightbox.style.display = "block";  // Menampilkan lightbox
-    });
-  });
+// Setelah animasi selesai, sembunyikan loader
+setTimeout(() => {
+  loader.style.display = "none";
+}, 500); // Cocokkan dengan durasi transisi fade CSS
 
-  // Menutup lightbox saat klik tombol close
-  document.querySelector(".close-lightbox").addEventListener("click", () => {
-    const lightbox = document.getElementById("lightbox");
-    lightbox.style.display = "none";  // Menutup lightbox
-  });
-});
+}, 2000); // Waktu tunggu sebelum loader fade });
+
+// Galeri buka tutup fullscreen const openGalleryBtn = document.getElementById("openGallery"); const closeGalleryBtn = document.getElementById("closeGallery"); const fullscreenGallery = document.getElementById("fullscreenGallery");
+
+if (openGalleryBtn && closeGalleryBtn && fullscreenGallery) { openGalleryBtn.addEventListener("click", () => { fullscreenGallery.classList.add("show"); });
+
+closeGalleryBtn.addEventListener("click", () => { fullscreenGallery.classList.remove("show"); }); }
+
+// Lightbox untuk gambar const lightbox = document.getElementById("lightbox"); const lightboxImg = lightbox?.querySelector("img");
+
+document.querySelectorAll(".gallery-grid img").forEach(img => { img.addEventListener("click", () => { if (lightbox && lightboxImg) { lightboxImg.src = img.src; lightbox.style.display = "block"; } }); });
+
+// Tombol tutup lightbox const closeLightbox = document.querySelector(".close-lightbox");
+
+if (closeLightbox && lightbox) { closeLightbox.addEventListener("click", () => { lightbox.style.display = "none"; }); }
+
+
 
  // Script Galeri
 
