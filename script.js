@@ -86,18 +86,7 @@ window.onload = function() {
         window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     }, 50); 
 
-    // Fungsi untuk fade out loader dengan penyesuaian delay
-    setTimeout(() => {
-        const loader = document.getElementById('loader');
-        if (loader) {
-            loader.classList.add('fade-out');
-        } else {
-            console.error('Loader element not found!');
-        }
-    }, 500); // Penambahan delay agar lebih lama jika perlu
-};
 // Script Load Web
-
 
 	
   // Script Log HWID, Device info, User Agent, dan IP Log
