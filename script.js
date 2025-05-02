@@ -1,22 +1,19 @@
-window.onload = function() {
-setTimeout(function() {
-window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-}, 50);
-};
-
-// Efek Fade Out Load
-
-window.onload = () => {
-// loader fade out
-setTimeout(() => {
-document.getElementById('loader').classList.add('fade-out');
-}, 2000);  // fade out
-// Script Load Web
-
-// Sembunyikan loader setelah halaman selesai dimuat
 window.addEventListener("load", function () {
-  const loader = document.getElementById("loader");
-  loader.style.display = "none";
+  // Scroll ke atas segera setelah load
+  setTimeout(function () {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, 50);
+
+  // Efek fade out loader
+  setTimeout(function () {
+    const loader = document.getElementById("loader");
+    loader.classList.add("fade-out");
+
+    // Setelah animasi selesai, sembunyikan loader
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 500); // Sesuaikan dengan durasi transisi CSS jika ada
+  }, 2000); // Tunggu 2 detik sebelum mulai fade
 });
 
 	//Galeri
