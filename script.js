@@ -10,7 +10,7 @@ window.onload = () => {
 // loader fade out
 setTimeout(() => {
 document.getElementById('loader').classList.add('fade-out');
-}, 1000);  // fade out
+}, 2000);  // fade out
 // Script Load Web
 
 	//Galeri
