@@ -112,16 +112,17 @@ nav::-webkit-scrollbar-thumb {
     }
 
 nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 9,3px;
-      font-weight: bold;
-      padding: 5px 10px;
-      border-radius: 20px;
-      text-transform: uppercase;
-      transition: background 0.3s ease, color 0.3s ease;
-      white-space: nowrap;
-    }
+  color: white;
+  text-decoration: none;
+  font-size: 8px;
+  font-weight: bold;
+  padding: 3px 6px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  transition: background 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+}
+
 nav a:hover, nav a.active {
       background: #c084fc;
       color: black;
