@@ -306,16 +306,13 @@ h2 {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0, 0, 0, 0.95);
   display: none;
   justify-content: center;
   align-items: center;
-  z-index: 999;
-  flex-wrap: wrap;
-  padding: 20px;
+  z-index: 9999;
   overflow-y: auto;
 }
-
 .overlay.show {
   display: flex;
 }
