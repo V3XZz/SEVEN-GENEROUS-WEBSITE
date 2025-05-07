@@ -37,16 +37,17 @@ body {
     }
 
 header {
-  padding: 10px 0; /* dari 10px jadi 5px, lebih kecil */
+  padding: 10px 0;
   text-align: center;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
-  overflow-x: visible;
   z-index: 1000;
-  transition: all 0.5s ease;
-      height: 130px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header div {
@@ -55,45 +56,43 @@ header div {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  flex-wrap: wrap;
   text-align: center;
+  flex-wrap: wrap;
 }
-    /* Pelengkap*/
+  /* Pelengkap*/
 
-
-   /*Logo*/
+  /*Logo Judul*/
 header img.logo-smpn {
-      height: auto;
-      width: 120px;
-      object-fit: contain;
-      margin-right: 5px;
-      margin-left: -20px;
-      margin-top: -30px;      
-    }
-    /*Logo*/
+  height: auto;
+  width: 120px;
+  object-fit: contain;
+  margin-right: 5px;
+  margin-left: -20px;
+  margin-top: -30px;
+}
+ /*Logo Judul*/
 
-     /* Judul */
+ /* Judul */
 header h1 {
   font-family: 'Staatliches', sans-serif;
   font-size: 35px;
   text-transform: uppercase;
   letter-spacing: 4px;
   margin-top: -30px;
-  color: #9370DB; /* Ungu gelap yang lebih pekat */
+  color: #9370DB;
   text-shadow: none;
   border: 2px solid #2E003E;
   padding: 5px 15px;
   border-radius: 10px;
   animation: glow 2s ease-in-out infinite alternate;
   transition: all 0.5s ease;
-
 }
 
 @keyframes glow {
-      0% { text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8); }
-      50% { text-shadow: 0px 0px 16px rgba(255, 255, 255, 1); }
-      100% { text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8); }
-    }
+  0% { text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8); }
+  50% { text-shadow: 0px 0px 16px rgba(255, 255, 255, 1); }
+  100% { text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8); }
+}
     /* Judul */
 
     /* Menu */
