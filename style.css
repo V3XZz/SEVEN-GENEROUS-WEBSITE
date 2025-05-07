@@ -104,9 +104,9 @@ nav {
      scrollbar-width: none;
     }
 nav::-webkit-scrollbar {
-      height: 7px;
-      display: none;
+      height: 8px;
     }
+    
 nav::-webkit-scrollbar-thumb {
       background: #aaa;
       border-radius: 5px;
@@ -428,7 +428,7 @@ footer .social-media i:hover {
 /*Media Sosial*/
 
 /* Jarak Antar Section*/
-    #beranda {
+#beranda {
   margin-bottom: 100px;
 }
 
@@ -440,8 +440,17 @@ footer .social-media i:hover {
   margin-bottom: 100px;
 }
 
+#karya {
+	margin-bottom: 100px;
+}
+
+
 #galeri-section {
         margin-bottom: 100px;
+}
+
+#manajement {
+	margin-bottom: 100px;
 }
 
 #kontak {
