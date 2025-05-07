@@ -168,11 +168,10 @@ h2 {
       gap: 10px;
       scroll-behavior: smooth;
       padding-bottom: 10px;
-      height: 80px;
     }
 
 .scroll-container::-webkit-scrollbar {
-      height: 2px;
+      height: 30px;
     }
 
 .scroll-container::-webkit-scrollbar-thumb {
