@@ -95,8 +95,9 @@ header h1 {
     /* Menu */
 nav {
       margin-top: -26px;
+      margin-right: 30px;
       display: flex;
-      justify-content: right;
+      justify-content: center;
       gap: 10px;
       overflow-x: auto;
       padding: 10px 20px;   
