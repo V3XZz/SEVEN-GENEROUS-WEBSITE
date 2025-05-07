@@ -97,11 +97,12 @@ header h1 {
 nav {
   margin-top: -26px;
   display: flex;
-  gap: 10px;
+  justify-content: flex-start; /* Menjaga posisi menu di kiri */
+  gap: 20px; /* Memberi jarak antar menu */
   overflow-x: auto;
   padding: 10px 20px;
   white-space: nowrap;
-  scrollbar-width: thin; /* Firefox */
+  background-color: #222; /* Pastikan ada latar belakang untuk nav */
 }
 
 nav::-webkit-scrollbar {
@@ -111,6 +112,24 @@ nav::-webkit-scrollbar {
 nav::-webkit-scrollbar-thumb {
   background: #aaa;
   border-radius: 5px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 7px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  transition: background 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+  background: #333; /* Latar belakang agar menu terlihat jelas */
+}
+
+nav a:hover, nav a.active {
+  background: #c084fc;
+  color: black;
 }
 /* Judul */
 
