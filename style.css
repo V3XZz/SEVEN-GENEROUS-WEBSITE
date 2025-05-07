@@ -102,11 +102,10 @@ nav {
       overflow-x: auto;
       padding: 10px 20px;   
      white-space: nowrap;
-     scrollbar-width: none;
     }
+
 nav::-webkit-scrollbar {
-      height: 30px;
-      width: 80px;
+      height: 10px;    
     }
     
 nav::-webkit-scrollbar-thumb {
