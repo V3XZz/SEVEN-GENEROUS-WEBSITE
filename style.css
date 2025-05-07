@@ -99,7 +99,6 @@ nav {
   display: flex;
   justify-content: flex-start;
   gap: 20px;
-  overflow-x: auto;
   padding: 10px 20px;
   white-space: nowrap;
 }
@@ -125,13 +124,15 @@ nav a {
   white-space: nowrap;
 }
 
-nav a:hover, nav a.active {
-  color: white; /* Teks tetap putih */
+nav a:hover {
+  background: #c084fc;
+  color: black;
 }
 
 nav a.active {
-  color: black; /* Warna teks hitam saat tombol aktif */
-  background: #c084fc; /* Background sesuai tema */
+  background: #c084fc;
+  color: black;
+  border: 2px solid #c084fc; /* Border untuk tombol aktif */
 }
 /* Judul */
 
