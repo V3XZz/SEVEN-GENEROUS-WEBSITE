@@ -95,41 +95,23 @@ header h1 {
 
     /* Menu */
 nav {
-      margin-top: -26px;
-     
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      overflow-x: auto;
-      padding: 10px 20px;   
-     white-space: nowrap;
-    }
-
-nav::-webkit-scrollbar {
-      height: 10px;    
-    }
-    
-nav::-webkit-scrollbar-thumb {
-      background: #aaa;
-      border-radius: 5px;
-    }
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 7px 12px;
-  border-radius: 20px;
-  text-transform: uppercase;
-  transition: background 0.3s ease, color 0.3s ease;
+  margin-top: -26px;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 20px;
   white-space: nowrap;
+  scrollbar-width: thin; /* Firefox */
 }
 
-nav a:hover, nav a.active {
-      background: #c084fc;
-      color: black;
-    }
+nav::-webkit-scrollbar {
+  height: 8px;
+}
+
+nav::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 5px;
+}
 /* Judul */
 
 /* Section */
