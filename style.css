@@ -104,7 +104,7 @@ nav {
 
     }
 nav::-webkit-scrollbar {
-      height: 2px;
+      height: 7px;
     }
 nav::-webkit-scrollbar-thumb {
       background: #aaa;
