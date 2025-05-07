@@ -98,7 +98,7 @@ nav {
   margin-top: -26px;
   display: flex;
   justify-content: flex-start;
-  gap: 20px; /* Jarak antar menu */
+  gap: 20px;
   overflow-x: auto;
   padding: 10px 20px;
   white-space: nowrap;
@@ -126,19 +126,12 @@ nav a {
 }
 
 nav a:hover, nav a.active {
-  background: none; /* Tidak ada background saat hover */
-  color: #c084fc; /* Ganti warna teks saat hover */
-}
-
-nav a:focus {
-  color: #fff; /* Warna teks tetap putih saat tombol dipilih */
-  background: #c084fc; /* Warna background tombol sesuai tema */
-  border-radius: 20px; /* Menjaga border-radius yang sama */
+  color: white; /* Teks tetap putih */
 }
 
 nav a.active {
-  color: black; /* Warna teks menjadi hitam ketika tombol aktif */
-  background: #c084fc; /* Warna background tombol aktif sesuai tema */
+  color: black; /* Warna teks hitam saat tombol aktif */
+  background: #c084fc; /* Background sesuai tema */
 }
 /* Judul */
 
