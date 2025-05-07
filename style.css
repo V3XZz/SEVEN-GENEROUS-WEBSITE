@@ -105,7 +105,7 @@ nav {
      scrollbar-width: none;
     }
 nav::-webkit-scrollbar {
-      height: 8px;
+      height: 30px;
     }
     
 nav::-webkit-scrollbar-thumb {
