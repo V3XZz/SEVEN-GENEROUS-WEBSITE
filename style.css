@@ -96,7 +96,7 @@ header h1 {
 nav {
       margin-top: -26px;
       display: flex;
-      justify-content: center;
+      justify-content: right;
       gap: 10px;
       overflow-x: auto;
       padding: 10px 20px;   
@@ -113,7 +113,6 @@ nav::-webkit-scrollbar-thumb {
     }
 
 nav a {
-  justify-content: right;
   color: white;
   text-decoration: none;
   font-size: 14px;
