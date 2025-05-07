@@ -167,11 +167,11 @@ h2 {
       overflow-x: auto;
       gap: 10px;
       scroll-behavior: smooth;
-      padding-bottom: 13px;
+      padding-bottom: 10px;
     }
 
 .scroll-container::-webkit-scrollbar {
-      height: 10px;
+      height: 13px;
     }
 
 .scroll-container::-webkit-scrollbar-thumb {
