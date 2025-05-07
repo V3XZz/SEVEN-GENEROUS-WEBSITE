@@ -129,11 +129,12 @@
        <p style ="text-transform: uppercase;">Projek penguatan profil pelajar pancasila</p>
     </div>
   </div>
+  <!--Kegiatan-->
 </section>
-<!--Kegiatan>
 	
-<!--Tampilan Luar Galeri-->
+
 <section id="galeri-section">
+	<!--Tampilan Luar Galeri-->
   <div class="blurbg">
     <h2><i class="fas fa-camera" style="color: #c084fc; margin-right: 8px;"></i>Galeri</h2>
 
@@ -144,13 +145,12 @@
       <img src="https://files.catbox.moe/wofchb.jpg" alt="Foto 4">
     </div>
     <div class ="container">
-    <button id ="openGallery">LIHAT GALERI</button>
+    <button id ="openGallery1">LIHAT GALERI</button>
   </div>
-<!--Tampilan Luar Galeri-->
-	
+<!--Tampilan Luar Galeri-->	
 <!--Tampilan Dalam / Isi Galeri-->
-  <div id="fullscreenGallery" class="overlay">
-    <button id="closeGallery">&times;</button>
+  <div id="fullscreenGallery1" class="overlay">
+    <button id="closeGallery1">&times;</button>
     <div class="gallery-grid">
       <!-- 13 foto -->
       <img src="https://files.catbox.moe/rxqw9t.jpg" alt="Foto">
@@ -170,8 +170,47 @@
       <img src="https://files.catbox.moe/6f8vg9.jpg" alt="Foto">
     </div>
   </div>
-</section>
 <!--Tampilan Dalam / Isi Galeri-->
+
+<!--Tampilan Luar Galeri-->	
+  <div class="blurbg">
+    <h2><i class="fas fa-camera" style="color: #c084fc; margin-right: 8px;"></i>Galeri Dokumentasi</h2>
+
+    <div class="galeri-preview">
+      <img src="" alt="Foto 1">
+      <img src="" alt="Foto 2">
+      <img src="" alt="Foto 3">
+      <img src="" alt="Foto 4">
+    </div>
+    <div class ="container">
+    <button id ="openGallery2">LIHAT GALERI</button>
+  </div>
+<!--Tampilan Luar Galeri-->
+<!--Tampilan Dalam Galeri-->	
+	<div id="fullscreenGallery2" class="overlay">
+    <button id="closeGallery2">&times;</button>
+    <div class="gallery-grid">
+      <!-- foto -->
+      <img src="https://files.catbox.moe/rxqw9t.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/wofchb.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/98bhlb.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/ionbaa.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/ox5y9c.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/s6b743.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/kwkfg9.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/1y11v1.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/lwnhce.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/1108i8.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/i6fdmn.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/9732q8.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/sd6i1q.jpg" alt="Foto">      
+      <img src="https://files.catbox.moe/2mxx37.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/6f8vg9.jpg" alt="Foto">
+    </div>
+  </div>
+<!--Tampilan Dalam / Isi Galeri-->	
+</section>
+
 
 <!--Pelengkap Dalam / Isi Galeri-->
 <!-- Lightbox Global -->
@@ -223,31 +262,46 @@
 	//Galeri
 // Menunggu DOM siap
 document.addEventListener("DOMContentLoaded", function () {
-  // Menampilkan galeri
-  document.getElementById("openGallery").onclick = function () {
-    document.getElementById("fullscreenGallery").classList.add("show"); // Menambahkan kelas 'show' untuk membuka galeri
-  };
+  // Fungsi untuk buka galeri fullscreen
+  function setupGallery(openButtonId, fullscreenGalleryId, closeButtonId) {
+    const openBtn = document.getElementById(openButtonId);
+    const closeBtn = document.getElementById(closeButtonId);
+    const gallery = document.getElementById(fullscreenGalleryId);
 
-  // Menutup galeri
-  document.getElementById("closeGallery").onclick = function () {
-    document.getElementById("fullscreenGallery").classList.remove("show"); // Menghapus kelas 'show' untuk menutup galeri
-  };
+    if (openBtn && gallery) {
+      openBtn.addEventListener("click", function () {
+        gallery.classList.add("show");
+      });
+    }
 
-  // Menampilkan lightbox saat gambar dalam galeri diklik
+    if (closeBtn && gallery) {
+      closeBtn.addEventListener("click", function () {
+        gallery.classList.remove("show");
+      });
+    }
+  }
+
+  // Setup dua galeri
+  setupGallery("openGallery1", "fullscreenGallery1", "closeGallery1");
+  setupGallery("openGallery2", "fullscreenGallery2", "closeGallery2");
+
+  // Lightbox saat gambar diklik
   document.querySelectorAll(".gallery-grid img").forEach(img => {
     img.addEventListener("click", () => {
       const lightbox = document.getElementById("lightbox");
       const lightboxImg = lightbox.querySelector(".lightbox-img");
-      lightboxImg.src = img.src; // Mengatur src image lightbox dengan src gambar yang diklik
-      lightbox.style.display = "flex"; // Menampilkan lightbox
+      lightboxImg.src = img.src;
+      lightbox.style.display = "flex";
     });
   });
 
-  // Menutup lightbox saat tombol close-lightbox diklik
-  document.querySelector(".close-lightbox").addEventListener("click", () => {
-    const lightbox = document.getElementById("lightbox");
-    lightbox.style.display = "none"; // Menutup lightbox
-  });
+  // Tutup lightbox
+  const closeLightboxBtn = document.querySelector(".close-lightbox");
+  if (closeLightboxBtn) {
+    closeLightboxBtn.addEventListener("click", () => {
+      document.getElementById("lightbox").style.display = "none";
+    });
+  }
 });
  // Script Galeri
 
