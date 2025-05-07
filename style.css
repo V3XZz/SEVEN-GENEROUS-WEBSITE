@@ -99,12 +99,13 @@ nav {
       justify-content: center;
       gap: 10px;
       overflow-x: auto;
-      padding: 10px 20px;
-
-
+      padding: 10px 20px;   
+     white-space: nowrap;
+     scrollbar-width: none;
     }
 nav::-webkit-scrollbar {
       height: 7px;
+      display: none;
     }
 nav::-webkit-scrollbar-thumb {
       background: #aaa;
