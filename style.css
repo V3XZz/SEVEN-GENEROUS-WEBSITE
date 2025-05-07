@@ -69,6 +69,7 @@ header img.logo-smpn {
       margin-right: 5px;
       margin-left: -20px;
       margin-top: -30px;
+      position: fixed;
     }
     /*Logo*/
 
@@ -78,12 +79,13 @@ header h1 {
   font-size: 35px;
   text-transform: uppercase;
   letter-spacing: 4px;
-      margin-top: -30px;
+  margin-top: -30px;
   color: #9370DB; /* Ungu gelap yang lebih pekat */
   text-shadow: none;
   border: 2px solid #2E003E;
   padding: 5px 15px;
   border-radius: 10px;
+  position: fixed;
   animation: glow 2s ease-in-out infinite alternate;
   transition: all 0.5s ease;
 
