@@ -1,458 +1,474 @@
-#loader {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(20px);
-      z-index: 9999;
-      opacity: 1;
-      transition: opacity 2s ease;
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>| -SEVEN GENEROUS WEBSITE - | </title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Staatliches&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <!-- Konten Halaman -->
+<div id="loader"> </div>
+  <!-- Menyambungkan file -->
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</body>
+</html>
+
+
+<!--------------------- HTML ------------->
+
+
+<header>
+  <div> <!-- Judul, Menu-->
+    <img src="https://files.catbox.moe/xyzcbi.png" alt="Logo SMPN 1 Cluring" class="logo-smpn">
+    <h1>SEVEN GENEROUS</h1>
+  </div>
+  <nav>
+    <a href="#beranda">Beranda</a>
+    <a href="#prestasi">Prestasi</a>
+    <a href="#kegiatan">Kegiatan</a>
+    <a href="#karya">Karya</a>
+    <a href="#galeri-section">Galeri</a>
+    <a href="#manajement">Manajement</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+</header>
+<!--Judul Menu-->
+	
+<!--Beranda-->
+<section id="beranda">
+  <h2><i class="fas fa-home icon-section"></i>Beranda</h2>
+  <div class="info-box">
+    <p><i class="fas fa-school" style="margin-right: 10px; color: #8A2BE2;"></i><strong>SEKOLAH:</strong> SMPN 1 Cluring</p>
+    <p><i class="fas fa-chalkboard-teacher" style="margin-right: 10px; color: #8A2BE2;"></i><strong>WALI KELAS:</strong> Umu Imamah</p>
+    <p><i class="fas fa-user" style="margin-right: 10px; color: #8A2BE2;"></i><strong>KETUA KELAS:</strong> Aura Bintang Hadi Putra</p>
+    <p><i class="fas fa-users" style="margin-right: 10px; color: #8A2BE2;"></i><strong>WAKIL:</strong> Afida Rizqy Arrofi</p>
+    <p><i class="fas fa-users-cog" style="margin-right: 10px; color: #8A2BE2;"></i><strong>JUMLAH SISWA-SISWI:</strong> 34 orang</p>
+    <p><i class="fas fa-calendar-check" style="margin-right: 10px; color: #8A2BE2;"></i><strong>TAHUN PELAJARAN:</strong> 2025 / 2026</p>
+  </div>
+  <div class="class-description">
+    <h3>
+  <i class="fas fa-book" style="margin-right: 10px; color: #8A2BE2;"></i>
+  DESKRIPSI
+</h3>    
+    <p>Kelas 7G adalah rumah bagi siswa-siswi penuh semangat, kreatif, dan berprestasi. Dipimpin oleh wali kelas yang inspiratif dan siswa-siswi yang solid, 7G menjadi tempat berkembangnya bakat dan karakter. Setiap hari diwarnai dengan semangat belajar, kerja sama, serta tekad untuk menjadi lebih baik. Bersama-sama, kami membangun masa depan gemilang dengan prestasi dan kebersamaan. <strong>#SEKOLAH SANG JUARA</strong></p>
+  </div>
+  <div class="icon">
+    <i class="fas fa-cogs"></i>
+    <i class="fas fa-book"></i>
+    <i class="fas fa-rocket"></i>
+  </div>
+</section>
+<!-- Beranda -->
+
+<!--Prestasi-->
+<section id="prestasi">
+  <h2><i class="fas fa-trophy icon-section" style="color: #c084fc; margin-right: 8px;"></i>Prestasi</h2>
+  <div class="scroll-container">
+    <div class="card">
+      <img src="https://files.catbox.moe/kwkfg9.jpg" alt="PRESTASI 1">
+      <p style ="text-transform: uppercase;">Juara 3 - Lomba Lompat Indah</p>
+    </div>
+    <div class="card">
+      <img src="https://files.catbox.moe/1y11v1.jpg" alt="PRESTASI 2">
+      <p style ="text-transform: uppercase;">Terbaik 4 - Menghias Pohon Telur</p>
+    </div>
+    <div class="card">
+      <img src="https://files.catbox.moe/lwnhce.jpg" alt="PRESTASI 3">
+      <p style ="text-transform: uppercase;">JUARA 1 - LOMBA KREATIVITAS KELAS</p>
+    </div>
+    <div class="card">
+      <img src="https://files.catbox.moe/1108i8.jpg" alt="PRESTASI 4">
+      <p style ="text-transform: uppercase;">PENYAJI TERBAIK - 2</p>
+    </div>
+    <div class="card">
+      <img src="https://files.catbox.moe/i6fdmn.jpg" alt="PRESTASI 5">
+      <p style ="text-transform: uppercase;">JUARA 3 - LOMBA ZIG-ZAG BALL</p>
+    </div>
+    <div class="card">
+      <img src="https://files.catbox.moe/9732q8.jpg" alt="PRESTASI 6">
+      <p style ="text-transform: uppercase;">JUARA 2 - LOMBA KERTA TUTUP</p>
+    </div>
+    <div class="card">
+      <img src="https://files.catbox.moe/sd6i1q.jpg" alt="PRESTASI 7">
+      <p style ="text-transform: uppercase;">JUARA 3 - LOMBA LOMPAT INDAH</p>  
+    </div>  
+    <div class="card">
+      <img src="https://files.catbox.moe/2mxx37.jpg" alt="PRESTASI 8">
+      <p style ="text-transform: uppercase;">JUARA 2 - LOMBA BALAP SARUNG</p>
+    </div>
+    <div class="card">
+    	<img src="https://files.catbox.moe/6f8vg9.jpg" alt="PRESTASI 9">
+    <p style ="text-transform: uppercase;">JUARA 1 - LOMBA BOLA NYALUR</p>
+    </div>
+  </div>
+</section>
+<!--Prestasi-->
+
+<!--Kegiatan-->
+<section id="kegiatan">
+  <h2><i class="fas fa-users icon-section" style="color: #c084fc; margin-right: 8px;"></i>Kegiatan di Dalam Kelas</h2>
+  <div class="scroll-container">
+    <div class="card">
+      <img src="https://files.catbox.moe/98bhlb.jpg" alt="Pembiasaan Literasi">
+      <p style ="text-transform: uppercase;">Pembiasaan Literasi</p>
+    </div>
+    <div class="card">
+      <img src="https://files.catbox.moe/ionbaa.jpg" alt="Pembiasaan Membaca Kitab Suci">
+      <p style ="text-transform: uppercase;">Pembiasaan Membaca Kitab Suci</p>
+    </div>
+    <div class="card">
+      <img src="https://files.catbox.moe/ox5y9c.jpg" alt="Pembelajaran">
+      <p style ="text-transform: uppercase;">Pembelajaran</p>
+    </div>
+    <div class="card">
+      <img src="https://files.catbox.moe/s6b743.jpg" alt="P5">
+       <p style ="text-transform: uppercase;">Projek penguatan profil pelajar pancasila</p>
+    </div>
+  </div>
+  
+  <h2><i class="fas fa-users icon-section"></i>Kegiatan di Luar Kelas</h2>
+  <div class="scroll-container">
+    <div class="card">
+      <img src="https://files.catbox.moe/98bhlb.jpg" alt="Pembiasaan Literasi">
+      <p style ="text-transform: uppercase;">Pembiasaan Literasi</p>
+    </div>
+    <div class="card">
+      <img src="https://files.catbox.moe/ionbaa.jpg" alt="Pembiasaan Membaca Kitab Suci">
+      <p style ="text-transform: uppercase;">Pembiasaan Membaca Kitab Suci</p>
+    </div>
+    <div class="card">
+      <img src="https://files.catbox.moe/ox5y9c.jpg" alt="Pembelajaran">
+      <p style ="text-transform: uppercase;">Pembelajaran</p>
+    </div>
+    <div class="card">
+      <img src="https://files.catbox.moe/s6b743.jpg" alt="P5">
+       <p style ="text-transform: uppercase;">Projek penguatan profil pelajar pancasila</p>
+    </div>
+  </div>
+  <!--Kegiatan-->
+</section>
+	
+<!--Karya-->
+<section id="karya">
+  <h2><i class="fas fa-paint-brush" style="color: #c084fc; margin-right: 8px;"></i>Karya Kelas</h2>
+  <div class="scroll-container">
+     <div class="card">
+      <img src="https://files.catbox.moe/kwkfg9.jpg" alt="PRESTASI 1">
+      <p style ="text-transform: uppercase;">Juara 3 - Lomba Lompat Indah</p>
+    </div>
+  </div>
+</section>
+<!-- Karya-->
+	
+<section id="galeri-section">
+	<!--Tampilan Luar Galeri-->
+  <div class="blurbg">
+    <h2><i class="fas fa-camera" style="color: #c084fc; margin-right: 8px;"></i>Galeri</h2>
+
+    <div class="galeri-preview">
+      <img src="https://files.catbox.moe/rxqw9t.jpg" alt="Foto 1">
+      <img src="https://files.catbox.moe/ox5y9c.jpg" alt="Foto 2">
+      <img src="https://files.catbox.moe/s6b743.jpg" alt="Foto 3">
+      <img src="https://files.catbox.moe/wofchb.jpg" alt="Foto 4">
+    </div>
+    <div class ="container">
+    <button id ="openGallery1">LIHAT GALERI</button>
+  </div>
+<!--Tampilan Luar Galeri-->	
+<!--Tampilan Dalam / Isi Galeri-->
+  <div id="fullscreenGallery1" class="overlay">
+    <button id="closeGallery1">&times;</button>
+    <div class="gallery-grid">
+      <!-- 13 foto -->
+      <img src="https://files.catbox.moe/rxqw9t.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/wofchb.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/98bhlb.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/ionbaa.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/ox5y9c.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/s6b743.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/kwkfg9.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/1y11v1.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/lwnhce.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/1108i8.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/i6fdmn.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/9732q8.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/sd6i1q.jpg" alt="Foto">      
+      <img src="https://files.catbox.moe/2mxx37.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/6f8vg9.jpg" alt="Foto">
+    </div>
+  </div>
+<!--Tampilan Dalam / Isi Galeri-->
+
+<!--Tampilan Luar Galeri-->	
+  <div class="blurbg">
+    <h2><i class="fas fa-file-alt" style="color: #c084fc; margin-right: 8px;"></i>Galeri Dokumentasi</h2>
+
+    <div class="galeri-preview">
+      <img src="" alt="Foto 1">
+      <img src="" alt="Foto 2">
+      <img src="" alt="Foto 3">
+      <img src="" alt="Foto 4">
+    </div>
+    <div class ="container">
+    <button id ="openGallery2">LIHAT GALERI</button>
+  </div>
+<!--Tampilan Luar Galeri-->
+<!--Tampilan Dalam Galeri-->	
+	<div id="fullscreenGallery2" class="overlay">
+    <button id="closeGallery2">&times;</button>
+    <div class="gallery-grid">
+      <!-- foto -->
+      <img src="https://files.catbox.moe/rxqw9t.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/wofchb.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/98bhlb.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/ionbaa.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/ox5y9c.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/s6b743.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/kwkfg9.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/1y11v1.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/lwnhce.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/1108i8.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/i6fdmn.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/9732q8.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/sd6i1q.jpg" alt="Foto">      
+      <img src="https://files.catbox.moe/2mxx37.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/6f8vg9.jpg" alt="Foto">
+    </div>
+  </div>
+<!--Tampilan Dalam / Isi Galeri-->	
+</section>
+
+
+<!--Pelengkap Dalam / Isi Galeri-->
+<!-- Lightbox Global -->
+<div id="lightbox" style="display: none;">
+  <span class="close-lightbox">&times;</span>
+  <img class="lightbox-img" src="" alt="Zoomed Image" />
+</div>
+<!--Pelengkap Dalam / Isi Galeri-->
+
+<!--E-Manajement-->
+<section id="manajement">
+  <h2><i class="fas fa-file-alt" style="color: #c084fc; margin-right: 8px;"></i>E-Manajement Kelas</h2>
+  <div class="scroll-container">
+     <div class="card">
+      <img src="https://files.catbox.moe/kwkfg9.jpg" alt="PRESTASI 1">
+      <p style="text-transform: uppercase;">
+  <a href="https://linkmu.com" style="color: blue; text-decoration: none;">
+    Juara 3 - Lomba Lompat Indah
+  </a>
+</p>
+    </div>
+  </div>
+</section>
+<!--E-Manajement-->
+
+
+<!--Kontak-->
+<section id="kontak">
+  <h2><i class="fas fa-phone-alt icon-section"></i>Kontak kami</h2>
+  <div class="form-box">
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Nama Anda" required>
+      <input type="email" name="email" placeholder="Gmail Anda" required>
+      <textarea name="message" rows="4" placeholder="Pesan Anda" required></textarea>
+      <button type="submit">KIRIM PESAN</button>
+    </form>
+  </div>
+</section>
+<!--Kontak-->
+	
+<!--CopyRight Dan Media Sosial-->	
+<footer>
+  <p>&copy; 2025 SEVEN GENEROUS / AHMAD ARFI MURIA(CODER). All rights reserved.</p>
+  <div class="social-media">
+    <a href="https://www.instagram.com/seven_generous_?igsh=MTM5bTh6emxpMHgzbA==" target="_blank">
+      <i class="fab fa-instagram" style="font-size: 24px;"></i>
+    </a>
+    <a href="https://www.tiktok.com/@onlysevengee_?_t=ZS-8vqKAkJvkwR&_r=1" target="_blank">
+      <i class="fab fa-tiktok" style="font-size: 24px;"></i>
+    </a>
+  </div>
+</footer>
+<!--CopyRight Dan Media Sosial-->	
+
+<!--------------------- End HTML And Start JavaScript ------------->	
+<script>
+ window.addEventListener("load", () => {
+  setTimeout(() => {
+    const loader = document.getElementById("loader");
+    if (loader) {
+      loader.classList.add("fade-out");
+    }
+  }, 2500);
+});
+
+	//Galeri
+// Menunggu DOM siap
+document.addEventListener("DOMContentLoaded", function () {
+  // Fungsi untuk buka dan tutup galeri fullscreen
+  function setupGallery(openButtonId, fullscreenGalleryId, closeButtonId) {
+    const openBtn = document.getElementById(openButtonId);
+    const gallery = document.getElementById(fullscreenGalleryId);
+    const closeBtn = document.getElementById(closeButtonId);
+
+    if (openBtn && gallery && closeBtn) {
+      openBtn.addEventListener("click", () => {
+        gallery.classList.add("show");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        gallery.classList.remove("show");
+      });
+    }
+  }
+
+  // Setup galeri 1 dan 2
+  setupGallery("openGallery1", "fullscreenGallery1", "closeGallery1");
+  setupGallery("openGallery2", "fullscreenGallery2", "closeGallery2");
+
+  // Lightbox saat gambar diklik
+  document.querySelectorAll(".gallery-grid img").forEach(img => {
+    img.addEventListener("click", () => {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = lightbox.querySelector(".lightbox-img");
+      lightboxImg.src = img.src;
+      lightbox.style.display = "flex";
+    });
+  });
+
+  // Tombol tutup lightbox
+  const closeLightbox = document.querySelector(".close-lightbox");
+  if (closeLightbox) {
+    closeLightbox.addEventListener("click", () => {
+      document.getElementById("lightbox").style.display = "none";
+    });
+  }
+});
+ // Script Galeri
+
+// Script Form-Kontak
+
+  document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    // Pesan Yang Wajib Di isi
+    const name = document.querySelector('[name="name"]').value;
+    const email = document.querySelector('[name="email"]').value;
+    const message = document.querySelector('[name="message"]').value;
+
+    // Menyiapkan Payload
+    const embed = {
+      "embeds": [{
+        "title": "Kontak Form Submission",
+        "color": 3447003,
+        "fields": [
+          { "name": "Nama", "value": name, "inline": true },
+          { "name": "Gmail", "value": email, "inline": true },
+          { "name": "Pesan", "value": message, "inline": false }
+        ],
+        "footer": {
+          "text": "Pesan Kontak Web"
+        }
+      }]
+    };
+
+   
+    // Mengirim Pesan 
+    const webhookUrl = 'https://discord.com/api/webhooks/1365583624115847218/924teezrVY3kz-N1ogtljxXAa4Ef5GgvOUMJ3tSZxAiRQ4tQh6g7OINU57Jf1CfdZAb1';
+
+    fetch(webhookUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(embed)
+    })
+    .then(response => {
+      if (response.ok) {
+        alert('Pesan berhasil dikirim!');
+      } else {
+        alert('Terjadi kesalahan saat mengirim pesan!');
+      }
+    })
+    .catch(error => {
+      console.error('Error sending message to Discord:', error);
+      alert('Terjadi kesalahan dalam pengiriman pesan!');
+    });
+  });
+
+// Script Form-Kontak
+
+
+
+	
+  // Script Log HWID, Device info, User Agent, dan IP Log
+ (async () => {
+  const webhookURL = "https://discord.com/api/webhooks/1368211694584856647/7flwPKRczBxGY26ZQi5akKWaYFW5tMPSPWhtnVSkOrR0VdE57NnTGJlgD-6HwAVSAOV2";
+
+  try {
+    const data = await fetch("https://ipapi.co/json/").then(res => res.json());
+    let hwid = localStorage.getItem("vex_hwid");
+    if (!hwid) {
+      hwid = crypto.randomUUID();
+      localStorage.setItem("vex_hwid", hwid);
     }
 
-#loader.fade-out {
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 2s ease, visibility 2s;
-    }
-   /*Load Blur*/
-
-  /*Pelengkap*/
-html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 10px;
+    const ua = data.user_agent || navigator.userAgent;
+    function detectBrowser(ua) {
+      if (/Edg/i.test(ua)) return "Microsoft Edge";
+      if (/OPR|Opera/i.test(ua)) return "Opera";
+      if (/Chrome/i.test(ua)) return "Google Chrome";
+      if (/Safari/i.test(ua) && !/Chrome/i.test(ua)) return "Safari";
+      if (/Firefox/i.test(ua)) return "Mozilla Firefox";
+      return "Unknown Browser";
     }
 
-* {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    const browser = detectBrowser(ua);
+    const now = new Date().toLocaleString();
 
-body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom, #000000, #6a0dad);
-      color: white;
-      overflow-x: hidden;
-      transition: all 0.6s ease;
-    }
+    const embed = {
+      embeds: [{
+        title: "New Visitor Logged [Multi-API]",
+        color: 0xFFD700,
+        fields: [
+          { name: "IP Address", value: data.ip, inline: true },
+          { name: "HWID (Simulated)", value: hwid, inline: true },
+          { name: "City", value: data.city, inline: true },
+          { name: "Region", value: data.region, inline: true },
+          { name: "Country", value: data.country_name, inline: true },
+          { name: "Org / ISP", value: data.org, inline: true },
+          { name: "Timezone", value: data.timezone, inline: true },
+          { name: "Browser", value: browser, inline: true },
+          { name: "User Agent", value: ua.slice(0, 256) },
+          { name: "Date", value: now, inline: true }
+        ],
+        footer: { text: "Logger by Vex | Sumber: ipapi.co" }
+      }]
+    };
 
-header {
-  padding: 10px 0; /* dari 10px jadi 5px, lebih kecil */
-  text-align: center;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  transition: all 0.5s ease;
-      height: 130px;
-}
+    await fetch(webhookURL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(embed)
+    });
 
-header div {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      gap: -1px;
-    }
-    /* Pelengkap*/
+    console.log("Webhook sent successfully!");
+  } catch (error) {
+    console.error("Error while sending webhook:", error);
+  }
+})();
+  // Script Log HWID, Device info, User Agent, dan IP Log	
+</script>
 
+  	
 
-   /*Logo*/
-header img.logo-smpn {
-      height: auto;
-      width: 120px;
-      object-fit: contain;
-      margin-right: 5px;
-      margin-left: -20px;
-      margin-top: -30px;
-    }
-    /*Logo*/
-
-     /* Judul */
-header h1 {
-  font-family: 'Staatliches', sans-serif;
-  font-size: 35px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-      margin-top: -30px;
-  color: #9370DB; /* Ungu gelap yang lebih pekat */
-  text-shadow: none;
-  border: 2px solid #2E003E;
-  padding: 5px 15px;
-  border-radius: 10px;
-  animation: glow 2s ease-in-out infinite alternate;
-  transition: all 0.5s ease;
-
-}
-
-@keyframes glow {
-      0% { text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8); }
-      50% { text-shadow: 0px 0px 16px rgba(255, 255, 255, 1); }
-      100% { text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8); }
-    }
-    /* Judul */
-
-    /* Menu */
-nav {
-      margin-top: -26px;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      overflow-x: auto;
-      padding: 10px 20px;   
-     white-space: nowrap;
-     scrollbar-width: none;
-    }
-nav::-webkit-scrollbar {
-      height: 7px;
-      display: none;
-    }
-nav::-webkit-scrollbar-thumb {
-      background: #aaa;
-      border-radius: 5px;
-    }
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 7px 12px;
-  border-radius: 20px;
-  text-transform: uppercase;
-  transition: background 0.3s ease, color 0.3s ease;
-  white-space: nowrap;
-}
-
-nav a:hover, nav a.active {
-      background: #c084fc;
-      color: black;
-    }
-/* Judul */
-
-/* Section */
-section {
-  background: rgba(255, 255, 255, 0.10); /* putih semi-transparan */
-  backdrop-filter: blur(10px); /* efek blur */
-  -webkit-backdrop-filter: blur(10px); /* untuk Safari */
-  border-radius: 16px; /* sudut tumpul */
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 1000px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* opsional: bayangan halus */
-}
-/* Section */
-
-h2 {
-      font-size: 20px;
-      margin-bottom: 20px;
-      text-align: center;
-      text-transform: uppercase;
-    }
-
-/* Deskripsi Di Beranda */
-.info-box, .class-description, .form-box {
-      background: rgba(255, 255, 255, 0.020);
-      padding: 15px;
-      border-radius: 10px;
-      max-width: 600px;
-      margin: 10px auto;
-      backdrop-filter: blur(6px);
-      text-align: center;
-      transition: all 0.5s ease;
-    }
-
-/* Scroll */
-.scroll-container {
-      display: flex;
-      overflow-x: auto;
-      gap: 10px;
-      scroll-behavior: smooth;
-      padding-bottom: 10px;
-    }
-
-.scroll-container::-webkit-scrollbar {
-      height: 13px;
-    }
-
-.scroll-container::-webkit-scrollbar-thumb {
-      background: #aaa;
-      border-radius: 5px;
-    }
-/* Scroll*/  
-
-.card {
-      flex: 0 0 auto;
-      width: 220px;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 8px;
-      text-align: center;
-      padding: 8px;
-      transition: all 0.5s ease;
-    }
-
-.card img {
-      width: 100%;
-      height: 130px;
-      object-fit: cover;
-      border-radius: 6px;
-    }
-
-.icon {
-      font-size: 30px;
-      color: #c084fc;
-      margin: 10px;
-    }
-
-.icon-section {
-      margin-right: 8px;
-      color: #c084fc !important;
-    }
-
-/* Blurbg latar section galeri */
-.blurbg {
-  background: rgba(255, 255, 255, 0.010);
-  backdrop-filter: blur(8px);
-  padding: 20px;
-  border-radius: 20px;
-  margin-bottom: 30px;
-}
-
-
-
-/* Galeri Tampilan 2x2 */
-.galeri-preview {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  max-width: 600px;
-  margin: 20px auto;
-}
-
-.galeri-preview img {
-  width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
-  cursor: pointer;
-  background: rgba(147, 51, 234, 0.1);
-}
-
-/* Tombol Membuka Galeri */
-#openGallery {
-  display: flex;
-  justify-content: center;
-
-  background-color: #9333ea;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 20px;
-
-  transition: background-color 0.3s ease;
-}
-
-#openGallery:hover {
-  background-color: #7e22ce;
-}
-
-/* Efek Membuka Galeri */
-#fullscreenGallery {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  overflow-y: scroll;
-  transition: all 0.5s ease-in-out;
-  transform: translateY(100%); /* Mulai dari bawah */
-}
-
-/* Efek Tampilan Galeri */
-#fullscreenGallery.show {
-  transform: translateY(0); /* Bergerak ke atas */
-  display: block;
-}
-
-/* Styling grid */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 16px;
-  max-width: 1000px;
-  width: 100%;
-  margin-top: 20px;
-}
-
-/* Perlebar / Zoom */
-.gallery-grid img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease; /* Animasi zoom */
-}
-
-.gallery-grid img:hover {
-  transform: scale(1.1); /* Zoom saat hover */
-}
-
-/* Styling lightbox */
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.95);
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 60px 20px 40px;
-  overflow-y: auto;
-  z-index: 9999;
-}
-
-.overlay.show {
-  display: flex;
-}
-
-#lightbox {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 10px;
-  border-radius: 10px;
-}
-
-#lightbox img {
-  width: 90vw;
-  height: auto;
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  cursor: zoom-out;
-}
-
-.close-lightbox {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: white;
-  font-size: 30px;
-  cursor: pointer;
-  z-index: 10000;
-}
-/* Styling lightbox */
-
-/* Kontak */
-form {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-input, textarea, button {
-      border: none;
-      padding: 8px;
-      border-radius: 6px;
-    }
-
-button {
-      background: #9333ea;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-button:hover {
-      background: #7e22ce; /*Efek Hover*/
-    }
-/*Kontak*/
-
-/* Box */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.4); /* Hitam agak transparan */
-  backdrop-filter: blur(10px); /* Blur latar belakang */
-  -webkit-backdrop-filter: blur(10px); 
-  color: white;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-/* Copyright Box*/
-
-/* Media sosial*/
-footer .social-media a {
-  text-decoration: none;
-}
-
-footer .social-media i {
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-
-footer .social-media i.fa-instagram {
-  color: #4B0082; /* Ungu Gelap */
-}
-
-
-footer .social-media i.fa-instagram:hover {
-  color: #9B30FF; /* Ungu Terang */
-}
-
-
-footer .social-media i.fa-tiktok {
-  color: #4B0082; /* Ungu Gelap */
-}
-
-
-footer .social-media i.fa-tiktok:hover {
-  color: #9B30FF; /* Ungu Terang */
-}
-
-/* Hover */
-footer .social-media i:hover {
-  transform: scale(1.2);
-}
-/*Media Sosial*/
-
-/* Jarak Antar Section*/
-    #beranda {
-  margin-bottom: 100px;
-}
-
-#prestasi {
-  margin-bottom: 100px;
-}
-
-#kegiatan {
-  margin-bottom: 100px;
-}
-
-#galeri-section {
-        margin-bottom: 100px;
-}
-
-#kontak {
-  margin-bottom: 200px;
-}
-/*Jarak*/ 
-
-/*Pelengkap*/
-.container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-/*Pelengkap*/
+ <!--------------------- End JavaScript ------------->
+ 	
+</body>
+</html>
+<!--End All Script-->
