@@ -29,12 +29,13 @@ html {
     }
 
 body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom, #000000, #6a0dad);
-      color: white;
-      overflow-x: hidden;
-      transition: all 0.6s ease;
-    }
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #000000, #6a0dad);
+  color: white;
+  overflow-x: hidden;
+  transition: all 0.6s ease;
+  margin: 0; /* Pastikan tidak ada margin yang mengganggu */
+}
 
 header {
   padding: 10px 0;
@@ -58,10 +59,9 @@ header div {
   gap: 10px;
   text-align: center;
   flex-wrap: wrap;
+  width: 100%; /* Tambahkan agar fleksibilitas header tetap terjaga */
 }
-  /* Pelengkap*/
 
-  /*Logo Judul*/
 header img.logo-smpn {
   height: auto;
   width: 120px;
@@ -70,9 +70,7 @@ header img.logo-smpn {
   margin-left: -20px;
   margin-top: -30px;
 }
- /*Logo Judul*/
 
- /* Judul */
 header h1 {
   font-family: 'Staatliches', sans-serif;
   font-size: 35px;
@@ -93,7 +91,6 @@ header h1 {
   50% { text-shadow: 0px 0px 16px rgba(255, 255, 255, 1); }
   100% { text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8); }
 }
-    /* Judul */
 
     /* Menu */
 nav {
