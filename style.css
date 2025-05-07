@@ -49,6 +49,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column; /* Tambahkan agar logo dan judul bisa ditata vertikal */
 }
 
 header div {
@@ -59,7 +60,8 @@ header div {
   gap: 10px;
   text-align: center;
   flex-wrap: wrap;
-  width: 100%; /* Tambahkan agar fleksibilitas header tetap terjaga */
+  width: 100%;
+  z-index: 999; /* Untuk memastikan div berada di atas */
 }
 
 header img.logo-smpn {
@@ -68,7 +70,7 @@ header img.logo-smpn {
   object-fit: contain;
   margin-right: 5px;
   margin-left: -20px;
-  margin-top: -30px;
+  margin-top: -10px; /* Atur margin untuk logo agar tidak tertutup */
 }
 
 header h1 {
@@ -76,7 +78,7 @@ header h1 {
   font-size: 35px;
   text-transform: uppercase;
   letter-spacing: 4px;
-  margin-top: -30px;
+  margin-top: -10px; /* Sesuaikan agar judul tidak tertutup logo */
   color: #9370DB;
   text-shadow: none;
   border: 2px solid #2E003E;
@@ -84,6 +86,7 @@ header h1 {
   border-radius: 10px;
   animation: glow 2s ease-in-out infinite alternate;
   transition: all 0.5s ease;
+  z-index: 1000; /* Pastikan judul berada di atas logo */
 }
 
 @keyframes glow {
