@@ -262,26 +262,24 @@
 	//Galeri
 // Menunggu DOM siap
 document.addEventListener("DOMContentLoaded", function () {
-  // Fungsi untuk buka galeri fullscreen
+  // Fungsi untuk buka dan tutup galeri fullscreen
   function setupGallery(openButtonId, fullscreenGalleryId, closeButtonId) {
     const openBtn = document.getElementById(openButtonId);
-    const closeBtn = document.getElementById(closeButtonId);
     const gallery = document.getElementById(fullscreenGalleryId);
+    const closeBtn = document.getElementById(closeButtonId);
 
-    if (openBtn && gallery) {
-      openBtn.addEventListener("click", function () {
+    if (openBtn && gallery && closeBtn) {
+      openBtn.addEventListener("click", () => {
         gallery.classList.add("show");
       });
-    }
 
-    if (closeBtn && gallery) {
-      closeBtn.addEventListener("click", function () {
+      closeBtn.addEventListener("click", () => {
         gallery.classList.remove("show");
       });
     }
   }
 
-  // Setup dua galeri
+  // Setup galeri 1 dan 2
   setupGallery("openGallery1", "fullscreenGallery1", "closeGallery1");
   setupGallery("openGallery2", "fullscreenGallery2", "closeGallery2");
 
@@ -295,10 +293,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Tutup lightbox
-  const closeLightboxBtn = document.querySelector(".close-lightbox");
-  if (closeLightboxBtn) {
-    closeLightboxBtn.addEventListener("click", () => {
+  // Tombol tutup lightbox
+  const closeLightbox = document.querySelector(".close-lightbox");
+  if (closeLightbox) {
+    closeLightbox.addEventListener("click", () => {
       document.getElementById("lightbox").style.display = "none";
     });
   }
