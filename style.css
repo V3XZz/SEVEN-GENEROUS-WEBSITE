@@ -43,6 +43,7 @@ header {
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
+  overflow-x: auto;
   z-index: 1000;
   transition: all 0.5s ease;
       height: 130px;
