@@ -103,6 +103,7 @@ nav {
   gap: 20px;
   padding: 10px 20px;
   white-space: nowrap;
+  overflow-x: auto; /* Menambahkan overflow-x agar bisa di-scroll secara horizontal */
 }
 
 nav::-webkit-scrollbar {
