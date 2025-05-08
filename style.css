@@ -107,6 +107,7 @@ nav {
   padding: 10px 20px;
   white-space: nowrap;
   width: max-content;
+  overflow-x: auto;
 }
 
 nav::-webkit-scrollbar {
