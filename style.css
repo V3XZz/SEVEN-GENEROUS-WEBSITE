@@ -145,7 +145,7 @@ nav a:hover,
 nav a.active {
   background: #c084fc;
   color: black;
-  border: 2px solid #c084fc;
+  border: 0.8px solid #c084fc;
 }
 /* Menu */
 
