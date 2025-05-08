@@ -96,14 +96,17 @@ header h1 {
 }
 
     /* Menu */
+.nav-scroll {
+  overflow-x: auto;
+  width: 100%;
+}
+
 nav {
-  margin-top: -26px;
   display: flex;
-  justify-content: flex-start;
   gap: 20px;
   padding: 10px 20px;
   white-space: nowrap;
-  overflow-x: auto; /* Menambahkan overflow-x agar bisa di-scroll secara horizontal */
+  width: max-content;
 }
 
 nav::-webkit-scrollbar {
@@ -127,15 +130,11 @@ nav a {
   white-space: nowrap;
 }
 
-nav a:hover {
-  background: #c084fc;
-  color: black;
-}
-
+nav a:hover,
 nav a.active {
   background: #c084fc;
   color: black;
-  border: 2px solid #c084fc; /* Border untuk tombol aktif */
+  border: 2px solid #c084fc;
 }
 /* Judul */
 
