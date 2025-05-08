@@ -48,11 +48,11 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  min-height: 130px;
+  min-height: 127px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; /* Tambahkan agar logo dan judul bisa ditata vertikal */
+  flex-direction: column; 
 }
 
 header div {
