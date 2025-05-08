@@ -70,7 +70,7 @@ header img.logo-smpn {
   object-fit: contain;
   margin-right: 5px;
   margin-left: -20px;
-  margin-top: -10px; /* Atur margin untuk logo agar tidak tertutup */
+  margin-top: -20px; /* Atur margin untuk logo agar tidak tertutup */
 }
 
 header h1 {
@@ -78,7 +78,7 @@ header h1 {
   font-size: 35px;
   text-transform: uppercase;
   letter-spacing: 4px;
-  margin-top: -10px; /* Sesuaikan agar judul tidak tertutup logo */
+  margin-top: -20px; /* Sesuaikan agar judul tidak tertutup logo */
   color: #9370DB;
   text-shadow: none;
   border: 2px solid #2E003E;
