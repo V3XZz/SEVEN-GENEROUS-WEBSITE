@@ -112,7 +112,7 @@ nav {
 }
 
 nav::-webkit-scrollbar {
-  height: 8px;
+  height: 5px;
 }
 
 nav::-webkit-scrollbar-thumb {
