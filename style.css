@@ -121,7 +121,7 @@ nav {
 
 /*Nav Scroll Style*/
 nav::-webkit-scrollbar {
-  height: 3px;
+  height: 4.5px;
 }
 
 nav::-webkit-scrollbar-thumb {
