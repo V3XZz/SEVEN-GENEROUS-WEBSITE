@@ -73,8 +73,7 @@ header img.logo-smpn {
   height: auto;
   width: 80px;
   object-fit: contain;
-  margin-right: 5px;
-  margin-left: -20px;
+  justify-content: center;
   margin-top: -20px; /* Atur margin untuk logo agar tidak tertutup */
 }
 /*Logo Samping Judul*/
