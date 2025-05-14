@@ -305,47 +305,44 @@
  
 
 	//Galeri
-// Menunggu DOM siap
-document.addEventListener("DOMContentLoaded", function () {
-  // Fungsi untuk buka dan tutup galeri fullscreen
-  function setupGallery(openButtonId, fullscreenGalleryId, closeButtonId) {
-    const openBtn = document.getElementById(openButtonId);
-    const gallery = document.getElementById(fullscreenGalleryId);
-    const closeBtn = document.getElementById(closeButtonId);
+// Fungsi untuk buka dan tutup galeri fullscreen
+function setupGallery(openButtonId, fullscreenGalleryId, closeButtonId) {
+  const openBtn = document.getElementById(openButtonId);
+  const gallery = document.getElementById(fullscreenGalleryId);
+  const closeBtn = document.getElementById(closeButtonId);
 
-    if (openBtn && gallery && closeBtn) {
-      openBtn.addEventListener("click", () => {
-        gallery.classList.add("show");
-      });
-
-      closeBtn.addEventListener("click", () => {
-        gallery.classList.remove("show");
-      });
-    }
-  }
-
-  // Setup galeri 1 dan 2
-  setupGallery("openGallery1", "fullscreenGallery1", "closeGallery1");
-  setupGallery("openGallery2", "fullscreenGallery2", "closeGallery2");
-
-  // Lightbox saat gambar diklik
-  document.querySelectorAll(".gallery-grid img").forEach(img => {
-    img.addEventListener("click", () => {
-      const lightbox = document.getElementById("lightbox");
-      const lightboxImg = lightbox.querySelector(".lightbox-img");
-      lightboxImg.src = img.src;
-      lightbox.style.display = "flex";
+  if (openBtn && gallery && closeBtn) {
+    openBtn.addEventListener("click", () => {
+      gallery.classList.add("show");
     });
+
+    closeBtn.addEventListener("click", () => {
+      gallery.classList.remove("show");
+    });
+  }
+}
+
+// Setup galeri 1 dan 2
+setupGallery("openGallery1", "fullscreenGallery1", "closeGallery1");
+setupGallery("openGallery2", "fullscreenGallery2", "closeGallery2");
+
+// Lightbox saat gambar diklik
+document.querySelectorAll(".gallery-grid img").forEach(img => {
+  img.addEventListener("click", () => {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector(".lightbox-img");
+    lightboxImg.src = img.src;
+    lightbox.style.display = "flex";
   });
-
-  // Tombol tutup lightbox
-  const closeLightbox = document.querySelector(".close-lightbox");
-  if (closeLightbox) {
-    closeLightbox.addEventListener("click", () => {
-      document.getElementById("lightbox").style.display = "none";
-    });
-  }
 });
+
+// Tombol tutup lightbox
+const closeLightbox = document.querySelector(".close-lightbox");
+if (closeLightbox) {
+  closeLightbox.addEventListener("click", () => {
+    document.getElementById("lightbox").style.display = "none";
+  });
+}
  // Script Galeri
 
 // Script Form-Kontak
