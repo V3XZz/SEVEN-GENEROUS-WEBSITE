@@ -6,25 +6,70 @@
   <title>| -SEVEN GENEROUS WEBSITE - | </title>
   <link rel="icon" href="https://files.catbox.moe/xyzcbi.png" type="image/png">
   
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Staatliches&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-  <!-- Konten Halaman -->
-  <!-- Menyambungkan file -->
   <link rel="stylesheet" href="style.css">
+   <script>
+  (function () {
+    const notif = document.createElement("div");
+    notif.textContent = "⏳ Memuat...";
+    Object.assign(notif.style, {
+      position: "fixed",
+      bottom: "10px",
+      right: "10px",
+      background: "#222",
+      color: "#fff",
+      fontSize: "12px",
+      padding: "6px 10px",
+      borderRadius: "5px",
+      zIndex: 9999,
+      fontFamily: "sans-serif",
+      opacity: "0.9"
+    });
+    document.body.appendChild(notif);
+
+    window.addEventListener("load", () => {
+      notif.textContent = "✅ Siap!";
+      setTimeout(() => notif.remove(), 800);
+    });
+  })();
+ 
+  function showDOMLoadingIndicator() {
+    const loadingIndicator = document.createElement("div");
+    loadingIndicator.textContent = "Loading DOM...";
+    Object.assign(loadingIndicator.style, {
+      position: "fixed",
+      bottom: "10px",
+      right: "10px",
+      background: "#000",
+      color: "#fff",
+      padding: "4px 8px",
+      fontSize: "12px",
+      borderRadius: "4px",
+      zIndex: "9999",
+      fontFamily: "sans-serif",
+      opacity: "0.8",
+    });
+
+    (document.body || document.documentElement).appendChild(loadingIndicator);
+
+    document.addEventListener("DOMContentLoaded", () => {
+      loadingIndicator.remove();
+    });
+  }
+
+  if (document.readyState === "loading") {
+    showDOMLoadingIndicator();
+  }
+</script>
 </body>
-</html>
 
 
-<!--------------------- HTML ------------->
-
-<!--Kepala-->
 <header>  
-  <div> <!-- Judul dan Logo -->  
-    <img src="https://files.catbox.moe/xyzcbi.png" alt="Logo SMPN 1 Cluring" class="logo-smpn">  
+  <div> 
+    <img src="https://files.catbox.moe/xyzcbi.png"  alt="Logo SMPN 1 Cluring" class="logo-smpn">  
     <h1>SEVEN GENEROUS</h1>  
   </div>  
   <div class="nav-scroll">
@@ -32,16 +77,13 @@
       <a href="#beranda">Beranda</a>  
       <a href="#prestasi">Prestasi</a>  
       <a href="#kegiatan">Kegiatan</a>  
-      <a href="#karya">Karya</a>  
       <a href="#galeri">Galeri</a>  
       <a href="#manajement">Manajement</a>  
       <a href="#kontak">Kontak</a>  
     </nav>
   </div>
 </header>
-<!--Kepala Web-->
-	
-<!--Beranda-->
+
 <section id="beranda">
   <h2><i class="fas fa-home icon-section" style="color: #c084fc; margin-right: 8px;"></i>Beranda</h2>
   <div class="info-box">
@@ -65,213 +107,177 @@
     <i class="fas fa-rocket"></i>
   </div>
 </section>
-<!-- Beranda -->
 
-<!--Prestasi-->
 <section id="prestasi">
   <h2><i class="fas fa-trophy icon-section" style="color: #c084fc; margin-right: 8px;"></i>Prestasi</h2>
   <div class="scroll-container">
     <div class="card">
-      <img src="https://files.catbox.moe/kwkfg9.jpg" alt="PRESTASI 1">
+      <img src="https://files.catbox.moe/kwkfg9.jpg" loading="lazy"   alt="PRESTASI 1">
       <p style ="text-transform: uppercase;">Juara 3 - Lomba Lompat Indah</p>
     </div>
     <div class="card">
-      <img src="https://files.catbox.moe/1y11v1.jpg" alt="PRESTASI 2">
+      <img src="https://files.catbox.moe/1y11v1.jpg" loading="lazy"   alt="PRESTASI 2">
       <p style ="text-transform: uppercase;">Terbaik 4 - Menghias Pohon Telur</p>
     </div>
     <div class="card">
-      <img src="https://files.catbox.moe/lwnhce.jpg" alt="PRESTASI 3">
+      <img src="https://files.catbox.moe/lwnhce.jpg" loading="lazy"   alt="PRESTASI 3">
       <p style ="text-transform: uppercase;">JUARA 1 - LOMBA KREATIVITAS KELAS</p>
     </div>
     <div class="card">
-      <img src="https://files.catbox.moe/1108i8.jpg" alt="PRESTASI 4">
+      <img src="https://files.catbox.moe/1108i8.jpg" loading="lazy"   alt="PRESTASI 4">
       <p style ="text-transform: uppercase;">PENYAJI TERBAIK - 2</p>
     </div>
     <div class="card">
-      <img src="https://files.catbox.moe/i6fdmn.jpg" alt="PRESTASI 5">
+      <img src="https://files.catbox.moe/i6fdmn.jpg" loading="lazy"   alt="PRESTASI 5">
       <p style ="text-transform: uppercase;">JUARA 3 - LOMBA ZIG-ZAG BALL</p>
     </div>
     <div class="card">
-      <img src="https://files.catbox.moe/9732q8.jpg" alt="PRESTASI 6">
+      <img src="https://files.catbox.moe/9732q8.jpg" loading="lazy"   alt="PRESTASI 6">
       <p style ="text-transform: uppercase;">JUARA 2 - LOMBA KERTA TUTUP</p>
     </div>
     <div class="card">
-      <img src="https://files.catbox.moe/sd6i1q.jpg" alt="PRESTASI 7">
+      <img src="https://files.catbox.moe/sd6i1q.jpg" loading="lazy"   alt="PRESTASI 7">
       <p style ="text-transform: uppercase;">JUARA 3 - LOMBA LOMPAT INDAH</p>  
     </div>  
     <div class="card">
-      <img src="https://files.catbox.moe/2mxx37.jpg" alt="PRESTASI 8">
+      <img src="https://files.catbox.moe/2mxx37.jpg" loading="lazy"   alt="PRESTASI 8">
       <p style ="text-transform: uppercase;">JUARA 2 - LOMBA BALAP SARUNG</p>
     </div>
     <div class="card">
-    	<img src="https://files.catbox.moe/6f8vg9.jpg" alt="PRESTASI 9">
+    	<img src="https://files.catbox.moe/6f8vg9.jpg" loading="lazy"   alt="PRESTASI 9">
     <p style ="text-transform: uppercase;">JUARA 1 - LOMBA BOLA NYALUR</p>
     </div>
   </div>
 </section>
-<!--Prestasi-->
 
-<!--Kegiatan-->
+
 <section id="kegiatan">
   <h2><i class="fas fa-users icon-section" style="color: #c084fc; margin-right: 8px;"></i>Kegiatan di Dalam Kelas</h2>
   <div class="scroll-container">
     <div class="card">
-      <img src="https://files.catbox.moe/98bhlb.jpg" alt="Pembiasaan Literasi">
+      <img src="https://files.catbox.moe/98bhlb.jpg" loading="lazy"   alt="Pembiasaan Literasi">
       <p style ="text-transform: uppercase;">Pembiasaan Literasi</p>
     </div>
     <div class="card">
-      <img src="https://files.catbox.moe/ionbaa.jpg" alt="Pembiasaan Membaca Kitab Suci">
+      <img src="https://files.catbox.moe/ionbaa.jpg" loading="lazy"   alt="Pembiasaan Membaca Kitab Suci">
       <p style ="text-transform: uppercase;">Pembiasaan Membaca Kitab Suci</p>
     </div>
     <div class="card">
-      <img src="https://files.catbox.moe/ox5y9c.jpg" alt="Pembelajaran">
+      <img src="https://files.catbox.moe/ox5y9c.jpg" loading="lazy"  alt="Pembelajaran">
       <p style ="text-transform: uppercase;">Pembelajaran</p>
     </div>
     <div class="card">
-      <img src="https://files.catbox.moe/s6b743.jpg" alt="P5">
+      <img src="https://files.catbox.moe/s6b743.jpg" loading="lazy"  alt="P5">
        <p style ="text-transform: uppercase;">Projek penguatan profil pelajar pancasila</p>
     </div>
   </div>
-  
-  <h2><i class="fas fa-users icon-section"></i>Kegiatan di Luar Kelas</h2>
-  <div class="scroll-container">
-    <div class="card">
-      <img src="https://files.catbox.moe/98bhlb.jpg" alt="Pembiasaan Literasi">
-      <p style ="text-transform: uppercase;">Pembiasaan Literasi</p>
-    </div>
-    <div class="card">
-      <img src="https://files.catbox.moe/ionbaa.jpg" alt="Pembiasaan Membaca Kitab Suci">
-      <p style ="text-transform: uppercase;">Pembiasaan Membaca Kitab Suci</p>
-    </div>
-    <div class="card">
-      <img src="https://files.catbox.moe/ox5y9c.jpg" alt="Pembelajaran">
-      <p style ="text-transform: uppercase;">Pembelajaran</p>
-    </div>
-    <div class="card">
-      <img src="https://files.catbox.moe/s6b743.jpg" alt="P5">
-       <p style ="text-transform: uppercase;">Projek penguatan profil pelajar pancasila</p>
-    </div>
-  </div>
-  <!--Kegiatan-->
 </section>
-	
-<!--Karya-->
-<section id="karya">
-  <h2><i class="fas fa-paint-brush" style="color: #c084fc; margin-right: 8px;"></i>Karya Kelas</h2>
-  <div class="scroll-container">
-     <div class="card">
-      <img src="https://files.catbox.moe/kwkfg9.jpg" alt="PRESTASI 1">
-      <p style ="text-transform: uppercase;">Juara 3 - Lomba Lompat Indah</p>
-    </div>
-  </div>
-</section>
-<!-- Karya-->
 	
 <section id="galeri">
-	<!--Tampilan Luar Galeri-->
   <div class="blurbg">
     <h2><i class="fas fa-camera" style="color: #c084fc; margin-right: 8px;"></i>Galeri</h2>
-
     <div class="galeri-preview">
-      <img src="https://files.catbox.moe/rxqw9t.jpg" alt="Foto 1">
-      <img src="https://files.catbox.moe/ox5y9c.jpg" alt="Foto 2">
-      <img src="https://files.catbox.moe/s6b743.jpg" alt="Foto 3">
-      <img src="https://files.catbox.moe/wofchb.jpg" alt="Foto 4">
+      <img src="https://files.catbox.moe/rxqw9t.jpg" loading="lazy"  alt="Foto 1">
+      <img src="https://files.catbox.moe/ox5y9c.jpg" loading="lazy"  alt="Foto 2">
+      <img src="https://files.catbox.moe/s6b743.jpg" loading="lazy"  alt="Foto 3">
+      <img src="https://files.catbox.moe/wofchb.jpg" loading="lazy"  alt="Foto 4">
     </div>
     <div class ="container">
     <button id ="openGallery1">LIHAT GALERI</button>
   </div>
-<!--Tampilan Luar Galeri-->	
-<!--Tampilan Dalam / Isi Galeri-->
   <div id="fullscreenGallery1" class="overlay">
     <button id="closeGallery1">&times;</button>
     <div class="gallery-grid">
-      <!-- 13 foto -->
-      <img src="https://files.catbox.moe/rxqw9t.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/wofchb.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/98bhlb.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/ionbaa.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/ox5y9c.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/s6b743.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/kwkfg9.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/1y11v1.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/lwnhce.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/1108i8.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/i6fdmn.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/9732q8.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/sd6i1q.jpg" alt="Foto">      
-      <img src="https://files.catbox.moe/2mxx37.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/6f8vg9.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/rxqw9t.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/wofchb.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/98bhlb.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/ionbaa.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/ox5y9c.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/s6b743.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/kwkfg9.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/1y11v1.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/lwnhce.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/1108i8.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/i6fdmn.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/9732q8.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/sd6i1q.jpg" loading="lazy"  alt="Foto">      
+      <img src="https://files.catbox.moe/2mxx37.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/6f8vg9.jpg" loading="lazy"  alt="Foto">
     </div>
   </div>
-<!--Tampilan Dalam / Isi Galeri-->
-
-<!--Tampilan Luar Galeri-->	
   <div class="blurbg">
     <h2><i class="fas fa-file-alt" style="color: #c084fc; margin-right: 8px;"></i>Galeri Dokumentasi</h2>
 
     <div class="galeri-preview">
-      <img src="" alt="Foto 1">
-      <img src="" alt="Foto 2">
-      <img src="" alt="Foto 3">
-      <img src="" alt="Foto 4">
+      <img src="https://files.catbox.moe/s50lzq.jpg" loading="lazy"  alt="Foto 1">
+      <img src="https://files.catbox.moe/ja7olp.jpg" loading="lazy"  alt="Foto 2">
+      <img src="https://files.catbox.moe/by69uk.jpg" loading="lazy"  alt="Foto 3">
+      <img src="https://files.catbox.moe/18culk.jpg" loading="lazy"  alt="Foto 4">
     </div>
     <div class ="container">
     <button id ="openGallery2">LIHAT GALERI</button>
   </div>
-<!--Tampilan Luar Galeri-->
-<!--Tampilan Dalam Galeri-->	
 	<div id="fullscreenGallery2" class="overlay">
     <button id="closeGallery2">&times;</button>
     <div class="gallery-grid">
-      <!-- foto -->
-      <img src="https://files.catbox.moe/s50lzq.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/ja7olp.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/by69uk.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/18culk.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/v0ehhh.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/2bfnqk.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/isixzw.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/8nhchz.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/mxsmyz.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/1108i8.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/i6fdmn.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/9732q8.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/sd6i1q.jpg" alt="Foto">      
-      <img src="https://files.catbox.moe/2mxx37.jpg" alt="Foto">
-      <img src="https://files.catbox.moe/6f8vg9.jpg" alt="Foto">
+      <img src="https://files.catbox.moe/s50lzq.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/ja7olp.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/by69uk.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/18culk.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/v0ehhh.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/2bfnqk.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/isixzw.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/8nhchz.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/mxsmyz.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/wyfh1h.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/6vsody.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/4d1w1z.jpg" loading="lazy"  alt="Foto"      
+      <img src="https://files.catbox.moe/d3jgak.jpg" loading="lazy"  alt="Foto">      
+      <img src="https://files.catbox.moe/t59nm3.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/onh38t.jpg" loading="lazy"  alt="Foto">
+      <img src="https://files.catbox.moe/tk32i5.jpg" loading="lazy"  alt="Foto">      
+      <img src="https://files.catbox.moe/jxq38f.jpg" loading="lazy"  alt="Foto">
     </div>
   </div>
-<!--Tampilan Dalam / Isi Galeri-->	
 </section>
 
 
-<!--Pelengkap Dalam / Isi Galeri-->
-<!-- Lightbox Global -->
 <div id="lightbox" style="display: none;">
   <span class="close-lightbox">&times;</span>
   <img class="lightbox-img" src="" alt="Zoomed Image" />
 </div>
-<!--Pelengkap Dalam / Isi Galeri-->
 
-<!--E-Manajement-->
 <section id="manajement">
   <h2><i class="fas fa-file-alt" style="color: #c084fc; margin-right: 8px;"></i>E-Manajement Kelas</h2>
   <div class="scroll-container">
      <div class="card">
-      <img src="https://files.catbox.moe/kwkfg9.jpg" alt="PRESTASI 1">
+      <img src="https://files.catbox.moe/tru7w4.png" alt="Manajement 1">
       <p style="text-transform: uppercase;">
-  <a href="https://linkmu.com" style="color: blue; text-decoration: none; border-bottom: 2px solid blue;">
-    Juara 3 - Lomba Lompat Indah
+  <a href="https://docs.google.com/spreadsheets/d/1CH8633UY9B9VugArGpBrS5UyDM9xQ0Lm7_sKf6FRcPQ/edit?usp=drivesdk" style="color: blue; text-decoration: none; border-bottom: 2px solid blue;">
+    E - Jurnal Kelas | Semester 1
+  </a>
+</p>
+    </div>
+    <div class="card">
+      <img src="https://files.catbox.moe/2ri4id.png" alt="Manajement 2">
+      <p style="text-transform: uppercase;">
+  <a href="https://docs.google.com/spreadsheets/d/1f9qJyKLMyneepeQwR3rIFB3P4kbOfMUdy8zVjQEP4_8/edit?usp=drivesdk" style="color: blue; text-decoration: none; border-bottom: 2px solid blue;">
+    E - Jurnal Pembelajaran Kelas | Semester 2
+  </a>
+</p>
+    </div>
+    <div class="card">
+      <img src="https://files.catbox.moe/w87hqm.png" alt="Manajement 3">
+      <p style="text-transform: uppercase;">
+  <a href="https://docs.google.com/spreadsheets/d/1yGuSya66rln66sI-jfPFKamhhFDS6OG_bz54OWWkafE/edit?usp=drivesdk" style="color: blue; text-decoration: none; border-bottom: 2px solid blue;">
+    E - Presensi
   </a>
 </p>
     </div>
   </div>
 </section>
-<!--E-Manajement-->
 
 
-<!--Kontak-->
 <section id="kontak">
   <h2><i class="fas fa-phone-alt icon-section"></i>Kontak kami</h2>
   <div class="form-box">
@@ -283,9 +289,7 @@
     </form>
   </div>
 </section>
-<!--Kontak-->
-	
-<!--CopyRight Dan Media Sosial-->	
+
 <footer>
   <p>&copy; 2025 SEVEN GENEROUS / AHMAD ARFI MURIA(CODER). All rights reserved.</p>
   <div class="social-media">
@@ -297,65 +301,71 @@
     </a>
   </div>
 </footer>
-<!--CopyRight Dan Media Sosial-->	
 
-<!--------------------- End HTML And Start JavaScript ------------->	
-<script>
-	
- 
+<script>	
 
-	//Galeri
-// Fungsi untuk buka dan tutup galeri fullscreen
-function setupGallery(openButtonId, fullscreenGalleryId, closeButtonId) {
-  const openBtn = document.getElementById(openButtonId);
-  const gallery = document.getElementById(fullscreenGalleryId);
-  const closeBtn = document.getElementById(closeButtonId);
 
-  if (openBtn && gallery && closeBtn) {
-    openBtn.addEventListener("click", () => {
-      gallery.classList.add("show");
+document.addEventListener("DOMContentLoaded", function () {
+  function setupGallery(openButtonId, fullscreenGalleryId, closeButtonId) {
+    const openBtn = document.getElementById(openButtonId);
+    const gallery = document.getElementById(fullscreenGalleryId);
+    const closeBtn = document.getElementById(closeButtonId);
+
+    if (openBtn && gallery && closeBtn) {
+      openBtn.addEventListener("click", () => {
+        gallery.classList.add("show");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        gallery.classList.remove("show");
+      });
+    }
+  }
+
+  setupGallery("openGallery1", "fullscreenGallery1", "closeGallery1");
+  setupGallery("openGallery2", "fullscreenGallery2", "closeGallery2");
+
+  document.querySelectorAll(".gallery-grid img").forEach(img => {
+    img.addEventListener("click", () => {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = lightbox.querySelector(".lightbox-img");
+      if (lightbox && lightboxImg) {
+        lightboxImg.src = img.src;
+        lightbox.style.display = "flex";
+      }
     });
+  });
 
-    closeBtn.addEventListener("click", () => {
-      gallery.classList.remove("show");
+  const closeLightbox = document.querySelector(".close-lightbox");
+  if (closeLightbox) {
+    closeLightbox.addEventListener("click", () => {
+      const lightbox = document.getElementById("lightbox");
+      if (lightbox) {
+        lightbox.style.display = "none";
+      }
     });
   }
-}
 
-// Setup galeri 1 dan 2
-setupGallery("openGallery1", "fullscreenGallery1", "closeGallery1");
-setupGallery("openGallery2", "fullscreenGallery2", "closeGallery2");
-
-// Lightbox saat gambar diklik
-document.querySelectorAll(".gallery-grid img").forEach(img => {
-  img.addEventListener("click", () => {
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = lightbox.querySelector(".lightbox-img");
-    lightboxImg.src = img.src;
-    lightbox.style.display = "flex";
-  });
+  const lightbox = document.getElementById("lightbox");
+  if (lightbox) {
+    lightbox.addEventListener("click", e => {
+      if (e.target === lightbox) {
+        lightbox.style.display = "none";
+      }
+    });
+  }
 });
-
-// Tombol tutup lightbox
-const closeLightbox = document.querySelector(".close-lightbox");
-if (closeLightbox) {
-  closeLightbox.addEventListener("click", () => {
-    document.getElementById("lightbox").style.display = "none";
-  });
-}
- // Script Galeri
-
-// Script Form-Kontak
-
+ 
+ 
+ 
+ 
   document.getElementById('contact-form').addEventListener('submit', function (event) {
     event.preventDefault();
-
-    // Pesan Yang Wajib Di isi
+   
     const name = document.querySelector('[name="name"]').value;
     const email = document.querySelector('[name="email"]').value;
     const message = document.querySelector('[name="message"]').value;
 
-    // Menyiapkan Payload
     const embed = {
       "embeds": [{
         "title": "Kontak Form Submission",
@@ -372,7 +382,6 @@ if (closeLightbox) {
     };
 
    
-    // Mengirim Pesan 
     const webhookUrl = 'https://discord.com/api/webhooks/1365583624115847218/924teezrVY3kz-N1ogtljxXAa4Ef5GgvOUMJ3tSZxAiRQ4tQh6g7OINU57Jf1CfdZAb1';
 
     fetch(webhookUrl, {
@@ -393,13 +402,9 @@ if (closeLightbox) {
     });
   });
 
-// Script Form-Kontak
 
 
 
-	
-  // Script Log HWID, Device info, User Agent, dan IP Log
- <script>
  	(async () => {
   const webhookURL = "https://discord.com/api/webhooks/1368211694584856647/7flwPKRczBxGY26ZQi5akKWaYFW5tMPSPWhtnVSkOrR0VdE57NnTGJlgD-6HwAVSAOV2";
 
@@ -455,12 +460,10 @@ if (closeLightbox) {
     console.error("Error while sending webhook:", error);
   }
 })();
+
+
 </script>
 
-  	
-
- <!--------------------- End JavaScript ------------->
  	
 </body>
 </html>
-<!--End All Script-->
