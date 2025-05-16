@@ -1,4 +1,4 @@
-# SEVEN GENEROUS WEBSITE
+# SEVEN GENEROUS WEBSITE(https://seven-generous-website.vercel.app)
 
 **Website Kelas 7G SMPN 1 Cluring**  
 Dokumentasi proyek website sederhana yang dibuat untuk mewakili identitas, prestasi, dan kegiatan kelas 7G (Seven Generous).
