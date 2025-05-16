@@ -1,89 +1,67 @@
-SEVEN GENEROUS WEBSITE
+# SEVEN GENEROUS WEBSITE
 
- 
-
-Website Kelas 7G SMPN 1 Cluring
+**Website Kelas 7G SMPN 1 Cluring**  
 Dokumentasi proyek website sederhana yang dibuat untuk mewakili identitas, prestasi, dan kegiatan kelas 7G (Seven Generous).
 
+---
+
+## Tabel Isi
+
+- [Deskripsi](#deskripsi)  
+- [Fitur Utama](#fitur-utama)  
+- [Struktur Proyek](#struktur-proyek)  
+- [Cara Menggunakan](#cara-menggunakan)  
+- [Teknologi yang Digunakan](#teknologi-yang-digunakan)  
+- [Kontributor](#kontributor)  
+- [Lisensi](#lisensi)
 
 ---
 
-Tabel Isi
-
-Deskripsi
-
-Fitur Utama
-
-Struktur Proyek
-
-Cara Menggunakan
-
-Teknologi yang Digunakan
-
-Kontributor
-
-Lisensi
-
-
-
----
-
-Deskripsi
+## Deskripsi
 
 Seven Generous Website adalah situs HTML statis yang menampilkan informasi penting seputar kelas 7G, mulai dari profil kelas, prestasi siswa, kegiatan dalam kelas, galeri foto, hingga kontak manajemen kelas. Website ini dirancang dengan semangat sederhana namun menarik agar dapat dijalankan di berbagai perangkat.
 
+---
+
+## Fitur Utama
+
+- **Beranda Kelas** – Informasi wali kelas, ketua kelas, jumlah siswa, dan deskripsi umum.  
+- **Prestasi** – Galeri prestasi siswa dalam berbagai lomba sekolah.  
+- **Kegiatan** – Dokumentasi foto kegiatan seperti literasi, P5, dan pembelajaran.  
+- **Galeri** – Album foto kelas dengan fitur preview dan lightbox.  
+- **Manajemen & Kontak** – Informasi struktural kelas dan kontak wali/pengurus kelas.  
+- **Notifikasi UI** – Mini notifikasi untuk status loading halaman.  
+- **Desain Responsif** – Didukung Google Fonts dan Font Awesome agar tampil elegan di semua perangkat.
 
 ---
 
-Fitur Utama
+## Struktur Proyek
 
-Beranda Kelas – Menampilkan informasi wali kelas, ketua kelas, jumlah siswa, dan deskripsi umum.
-
-Prestasi – Galeri prestasi siswa dalam berbagai lomba sekolah.
-
-Kegiatan – Dokumentasi foto kegiatan seperti literasi, P5, dan pembelajaran.
-
-Galeri – Album foto kelas dengan fitur preview dan lightbox.
-
-Manajemen & Kontak – Informasi struktural kelas dan kontak wali/pengurus kelas.
-
-Notifikasi UI – Mini notifikasi untuk status loading halaman.
-
-Desain Responsif – Didukung Google Fonts dan Font Awesome agar tetap tampil elegan di semua perangkat.
-
-
+seven-generous-website/ ├── index.html          # Halaman utama website ├── style.css           # File styling utama ├── /images/            # Folder opsional untuk gambar (jika tidak pakai CDN) ├── README.md           # Dokumentasi proyek (file ini) └── favicon.png         # Ikon website (jika disimpan lokal)
 
 ---
 
-Struktur Proyek
-
-seven-generous-website/
-├── index.html            # Halaman utama website
-├── style.css             # File styling utama
-├── /images/              # Folder opsional untuk menyimpan gambar (jika tidak gunakan CDN)
-├── README.md             # Dokumentasi proyek (file ini)
-└── favicon.png           # Ikon website (jika disimpan lokal)
-
-
----
-
-Cara Menggunakan
+## Cara Menggunakan
 
 1. Clone repositori ini:
 
-
-
+```bash
 git clone https://github.com/username/seven-generous-website.git
 
-2. Buka file index.html di browser:
+2. Buka file index.html di browser lokal:
 
 
 
-start index.html    # Windows
-open index.html     # macOS
-xdg-open index.html # Linux
+# Windows
+start index.html
 
-3. Atau buka versi online:
+# macOS
+open index.html
+
+# Linux
+xdg-open index.html
+
+3. Atau akses langsung versi online:
 https://seven-generous-website.vercel.app
 
 
