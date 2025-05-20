@@ -305,7 +305,7 @@
 <script>	
 
 
-document.addEventListener("DOMContentLoaded", function () {
+ document.addEventListener("DOMContentLoaded", function () {
   function setupGallery(openButtonId, fullscreenGalleryId, closeButtonId) {
     const openBtn = document.getElementById(openButtonId);
     const gallery = document.getElementById(fullscreenGalleryId);
@@ -332,6 +332,7 @@ document.addEventListener("DOMContentLoaded", function () {
     img.addEventListener("click", () => {
       if (lightbox && lightboxImg) {
         lightboxImg.src = img.src;
+        lightboxImg.classList.remove("zoomed");
         lightbox.style.display = "flex";
       }
     });
@@ -343,10 +344,15 @@ document.addEventListener("DOMContentLoaded", function () {
       img.addEventListener("click", () => {
         if (lightbox && lightboxImg) {
           lightboxImg.src = img.src;
+          lightboxImg.classList.remove("zoomed");
           lightbox.style.display = "flex";
         }
       });
     });
+  });
+
+  lightboxImg.addEventListener("click", () => {
+    lightboxImg.classList.toggle("zoomed");
   });
 
   const closeLightbox = document.querySelector(".close-lightbox");
@@ -354,6 +360,7 @@ document.addEventListener("DOMContentLoaded", function () {
     closeLightbox.addEventListener("click", () => {
       if (lightbox) {
         lightbox.style.display = "none";
+        lightboxImg.classList.remove("zoomed");
       }
     });
   }
@@ -362,6 +369,7 @@ document.addEventListener("DOMContentLoaded", function () {
     lightbox.addEventListener("click", e => {
       if (e.target === lightbox) {
         lightbox.style.display = "none";
+        lightboxImg.classList.remove("zoomed");
       }
     });
   }
