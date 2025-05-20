@@ -341,8 +341,15 @@ h2 {
   height: auto;
   max-width: 1000px
   border-radius: 10px;
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+}
+
+.lightbox-img.zoomed {
+  transform: scale(1.1);
   cursor: zoom-out;
 }
+
 
 .close-lightbox {
   position: absolute;
