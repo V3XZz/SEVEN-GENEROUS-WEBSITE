@@ -325,10 +325,11 @@ document.addEventListener("DOMContentLoaded", function () {
   setupGallery("openGallery1", "fullscreenGallery1", "closeGallery1");
   setupGallery("openGallery2", "fullscreenGallery2", "closeGallery2");
 
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = lightbox.querySelector(".lightbox-img");
+
   document.querySelectorAll(".gallery-grid img").forEach(img => {
     img.addEventListener("click", () => {
-      const lightbox = document.getElementById("lightbox");
-      const lightboxImg = lightbox.querySelector(".lightbox-img");
       if (lightbox && lightboxImg) {
         lightboxImg.src = img.src;
         lightbox.style.display = "flex";
@@ -336,17 +337,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  const sections = ["#prestasi img", "#kegiatan img", "#manajement img"];
+  sections.forEach(selector => {
+    document.querySelectorAll(selector).forEach(img => {
+      img.addEventListener("click", () => {
+        if (lightbox && lightboxImg) {
+          lightboxImg.src = img.src;
+          lightbox.style.display = "flex";
+        }
+      });
+    });
+  });
+
   const closeLightbox = document.querySelector(".close-lightbox");
   if (closeLightbox) {
     closeLightbox.addEventListener("click", () => {
-      const lightbox = document.getElementById("lightbox");
       if (lightbox) {
         lightbox.style.display = "none";
       }
     });
   }
 
-  const lightbox = document.getElementById("lightbox");
   if (lightbox) {
     lightbox.addEventListener("click", e => {
       if (e.target === lightbox) {
