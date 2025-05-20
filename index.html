@@ -305,7 +305,7 @@
 <script>	
 
 
- document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
   function setupGallery(openButtonId, fullscreenGalleryId, closeButtonId) {
     const openBtn = document.getElementById(openButtonId);
     const gallery = document.getElementById(fullscreenGalleryId);
@@ -328,13 +328,23 @@
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = lightbox.querySelector(".lightbox-img");
 
+  function openLightbox(img) {
+    if (lightbox && lightboxImg) {
+      lightboxImg.style.transform = "scale(0.7)";
+      lightboxImg.style.opacity = "0";
+      lightboxImg.src = img.src;
+      lightbox.style.display = "flex";
+      setTimeout(() => {
+        lightboxImg.style.transition = "transform 0.4s ease, opacity 0.4s ease";
+        lightboxImg.style.transform = "scale(1)";
+        lightboxImg.style.opacity = "1";
+      }, 50);
+    }
+  }
+
   document.querySelectorAll(".gallery-grid img").forEach(img => {
     img.addEventListener("click", () => {
-      if (lightbox && lightboxImg) {
-        lightboxImg.src = img.src;
-        lightboxImg.classList.remove("zoomed");
-        lightbox.style.display = "flex";
-      }
+      openLightbox(img);
     });
   });
 
@@ -342,17 +352,9 @@
   sections.forEach(selector => {
     document.querySelectorAll(selector).forEach(img => {
       img.addEventListener("click", () => {
-        if (lightbox && lightboxImg) {
-          lightboxImg.src = img.src;
-          lightboxImg.classList.remove("zoomed");
-          lightbox.style.display = "flex";
-        }
+        openLightbox(img);
       });
     });
-  });
-
-  lightboxImg.addEventListener("click", () => {
-    lightboxImg.classList.toggle("zoomed");
   });
 
   const closeLightbox = document.querySelector(".close-lightbox");
@@ -360,7 +362,7 @@
     closeLightbox.addEventListener("click", () => {
       if (lightbox) {
         lightbox.style.display = "none";
-        lightboxImg.classList.remove("zoomed");
+        lightboxImg.style.transition = "";
       }
     });
   }
@@ -369,7 +371,7 @@
     lightbox.addEventListener("click", e => {
       if (e.target === lightbox) {
         lightbox.style.display = "none";
-        lightboxImg.classList.remove("zoomed");
+        lightboxImg.style.transition = "";
       }
     });
   }
