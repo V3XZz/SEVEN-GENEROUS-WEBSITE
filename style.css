@@ -75,7 +75,6 @@ header h1 {
 }
 
 nav {
-  margin-top: -10px;
   display: flex;
   gap: 20px;
   padding: 10px 20px;
@@ -131,19 +130,30 @@ h2 {
       text-transform: uppercase;
     }
 
-.info-box {
-background: linear-gradient(rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02)),
-url('https://files.catbox.moe/xyzcbi.png');
-background-repeat: no-repeat;
-background-position: center;
-background-size: contain;
-padding: 15px;
-border-radius: 10px;
-max-width: 600px;
-margin: 10px auto;
-backdrop-filter: blur(6px);
-text-align: center;
-transition: all 0.5s ease;
+.infobox {
+  position: relative;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 10px auto;
+  backdrop-filter: blur(6px);
+  text-align: center;
+  transition: all 0.5s ease;
+  background: rgba(255, 255, 255, 0.02);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.infobox::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('https://files.catbox.moe/xyzcbi.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.2;
+  z-index: -1;
 }
 
 .class-description {
