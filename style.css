@@ -131,22 +131,22 @@ h2 {
     }
 
 .info-box {
-background: linear-gradient(rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02)),
-url('https://files.catbox.moe/xyzcbi.png');
-background-repeat: no-repeat;
-background-position: center;
-background-size: contain;
-padding: 15px;
-border-radius: 10px;
-max-width: 600px;
-margin: 10px auto;
-backdrop-filter: blur(6px);
-text-align: center;
-transition: all 0.5s ease;
+  background: rgba(255, 255, 255, 0.020);  
+  background-repeat: no-repeat;  
+  background-position: center;  
+  background-size: contain;  
+  padding: 15px;  
+  border-radius: 10px;  
+  max-width: 600px;  
+  margin: 10px auto;  
+  backdrop-filter: blur(6px);  
+  text-align: center;  
+  transition: all 0.5s
 }
 
 .class-description {
   background: rgba(255, 255, 255, 0.020);
+  background-image: url('https://files.catbox.moe/xyzcbi.png');  
   padding: 15px;
   border-radius: 10px;
   max-width: 600px;
@@ -378,8 +378,8 @@ button:hover {
 footer {
   text-align: center;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.4); /* Hitam agak transparan */
-  backdrop-filter: blur(10px); /* Blur latar belakang */
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px); 
   -webkit-backdrop-filter: blur(10px); 
   color: white;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
