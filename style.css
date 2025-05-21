@@ -1,5 +1,4 @@
  
-  /*Pelengkap*/
 html {
       scroll-behavior: smooth;
       scroll-padding-top: 10px;
@@ -10,16 +9,14 @@ html {
       padding: 0;
       box-sizing: border-box;
     }
-  /*Pelengkap*
   
-/*Kepala Web*/
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(to bottom, #000000, #6a0dad);
   color: white;
   overflow-x: hidden;
   transition: all 0.6s ease;
-  margin: 0; /* Pastikan tidak ada margin yang mengganggu */
+  margin: 0; 
 }
 
 header {
@@ -46,21 +43,10 @@ header div {
   text-align: center;
   flex-wrap: wrap;
   width: 100%;
-  z-index: 999; /* Untuk memastikan div berada di atas */
+  z-index: 999; 
 }
-/*Kepala Web*/
 
-/*Logo Samping Judul*/
-header img.logo-smpn {
-  height: auto;
-  width: 80px;
-  object-fit: contain;
-  justify-content: center;
-  margin-top: -20px; /* Atur margin untuk logo agar tidak tertutup */
-}
-/*Logo Samping Judul*/
 
-/* Judul Web*/
 header h1 {
   font-family: 'Staatliches', sans-serif;
   font-size: 35px;
@@ -82,9 +68,7 @@ header h1 {
   50% { text-shadow: 0px 0px 16px rgba(255, 255, 255, 1); }
   100% { text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8); }
 }
-/*Judul Web*/
 
-    /* Menu */
 .nav-scroll {
   overflow-x: auto;
   width: 100%;
@@ -100,7 +84,6 @@ nav {
   overflow-x: auto;
 }
 
-/*Nav Scroll Style*/
 nav::-webkit-scrollbar {
   height: 4.5px;
 }
@@ -109,7 +92,6 @@ nav::-webkit-scrollbar-thumb {
   background: #aaa;
   border-radius: 5px;
 }
-/*Nav Scroll Style*/
 
 nav a {
   color: white;
@@ -129,20 +111,18 @@ nav a.active {
   color: black;
   border: 0.8px solid #c084fc;
 }
-/* Menu */
 
-/* Section */
 section {
-  background: rgba(255, 255, 255, 0.10); /* putih semi-transparan */
-  backdrop-filter: blur(10px); /* efek blur */
-  -webkit-backdrop-filter: blur(10px); /* untuk Safari */
-  border-radius: 16px; /* sudut tumpul */
+  background: rgba(255, 255, 255, 0.10); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+  border-radius: 16px; 
   padding: 20px;
   margin: 20px auto;
   max-width: 1000px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* opsional: bayangan halus */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); 
 }
-/* Section */
+
 
 h2 {
       font-size: 20px;
@@ -151,19 +131,43 @@ h2 {
       text-transform: uppercase;
     }
 
-/* Deskripsi Di Beranda */
-.info-box, .class-description, .form-box {
-      background: rgba(255, 255, 255, 0.020);
-      padding: 15px;
-      border-radius: 10px;
-      max-width: 600px;
-      margin: 10px auto;
-      backdrop-filter: blur(6px);
-      text-align: center;
-      transition: all 0.5s ease;
-    }
+.info-box {
+  background: rgba(255, 255, 255, 0.020);
+  background-image: url('https://files.catbox.moe/xyzcbi.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 10px auto;
+  backdrop-filter: blur(6px);
+  text-align: center;
+  transition: all 0.5s ease;
+}
 
-/* Scroll */
+.class-description {
+  background: rgba(255, 255, 255, 0.020);
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 10px auto;
+  backdrop-filter: blur(6px);
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.form-box {
+  background: rgba(255, 255, 255, 0.020);
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 10px auto;
+  backdrop-filter: blur(6px);
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
 .scroll-container {
       display: flex;
       overflow-x: auto;
@@ -180,7 +184,6 @@ h2 {
       background: #aaa;
       border-radius: 5px;
     }
-/* Scroll*/  
 
 .card {
       flex: 0 0 auto;
@@ -210,7 +213,7 @@ h2 {
       color: #c084fc !important;
     }
 
-/* Blurbg latar section */
+
 .blurbg {
   background: rgba(255, 255, 255, 0.010);
   backdrop-filter: blur(8px);
@@ -220,8 +223,6 @@ h2 {
 }
 
 
-
-/* Galeri Tampilan 2x2 */
 .galeri-preview {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -238,7 +239,6 @@ h2 {
   background: rgba(147, 51, 234, 0.1);
 }
 
-/* Tombol Membuka Galeri */
 #openGallery {
   display: flex;
   justify-content: center;
@@ -259,7 +259,6 @@ h2 {
   background-color: #7e22ce;
 }
 
-/* Efek Membuka Galeri */
 #fullscreenGallery {
   display: none;
   position: fixed;
@@ -270,16 +269,14 @@ h2 {
   background: rgba(0, 0, 0, 0.8);
   overflow-y: scroll;
   transition: all 0.5s ease-in-out;
-  transform: translateY(100%); /* Mulai dari bawah */
+  transform: translateY(100%); 
 }
 
-/* Efek Tampilan Galeri */
 #fullscreenGallery.show {
-  transform: translateY(0); /* Bergerak ke atas */
+  transform: translateY(0); 
   display: block;
 }
 
-/* Styling grid */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -289,20 +286,18 @@ h2 {
   margin-top: 20px;
 }
 
-/* Perlebar / Zoom */
 .gallery-grid img {
   width: 100%;
   height: auto;
   border-radius: 10px;
   cursor: pointer;
-  transition: transform 0.3s ease; /* Animasi zoom */
+  transition: transform 0.3s ease; 
 }
 
 .gallery-grid img:hover {
-  transform: scale(1.1); /* Zoom saat hover */
+  transform: scale(1.1); 
 }
 
-/* Styling lightbox */
 
 .overlay {
   position: fixed;
@@ -355,9 +350,8 @@ h2 {
   cursor: pointer;
   z-index: 10000;
 }
-/* Styling lightbox */
 
-/* Kontak */
+
 form {
       display: flex;
       flex-direction: column;
@@ -378,11 +372,10 @@ button {
       transition: background 0.3s ease;
     }
 button:hover {
-      background: #7e22ce; /*Efek Hover*/
+      background: #7e22ce; 
     }
-/*Kontak*/
 
-/* Box */
+
 footer {
   text-align: center;
   padding: 20px;
@@ -392,9 +385,8 @@ footer {
   color: white;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
-/* Copyright Box*/
 
-/* Media sosial*/
+
 footer .social-media a {
   text-decoration: none;
 }
@@ -405,31 +397,27 @@ footer .social-media i {
 
 
 footer .social-media i.fa-instagram {
-  color: #4B0082; /* Ungu Gelap */
+  color: #4B0082; 
 }
 
 
 footer .social-media i.fa-instagram:hover {
-  color: #9B30FF; /* Ungu Terang */
+  color: #9B30FF; 
 }
 
 
 footer .social-media i.fa-tiktok {
-  color: #4B0082; /* Ungu Gelap */
+  color: #4B0082; 
 }
-
 
 footer .social-media i.fa-tiktok:hover {
-  color: #9B30FF; /* Ungu Terang */
+  color: #9B30FF; 
 }
 
-/* Hover */
 footer .social-media i:hover {
   transform: scale(1.2);
 }
-/*Media Sosial*/
 
-/* Jarak Antar Section*/
 #beranda {
   margin-bottom: 100px;
 }
@@ -458,12 +446,10 @@ footer .social-media i:hover {
 #kontak {
   margin-bottom: 200px;
 }
-/*Jarak*/ 
 
-/*Pelengkap*/
+
 .container {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-/*Pelengkap*/
