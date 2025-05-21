@@ -147,6 +147,9 @@ h2 {
 .class-description {
   background: rgba(255, 255, 255, 0.020);
   background-image: url('https://files.catbox.moe/xyzcbi.png');  
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   padding: 15px;
   border-radius: 10px;
   max-width: 600px;
@@ -241,7 +244,6 @@ h2 {
 #openGallery {
   display: flex;
   justify-content: center;
-
   background-color: #9333ea;
   color: white;
   border: none;
