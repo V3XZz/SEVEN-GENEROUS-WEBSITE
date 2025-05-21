@@ -166,8 +166,8 @@ h2 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  filter: blur(8px);
-  opacity: 0.4;
+  filter: blur(10px);
+  opacity: 0.2;
   z-index: -1;
 }
 
