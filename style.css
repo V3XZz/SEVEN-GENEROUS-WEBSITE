@@ -361,6 +361,11 @@ h2 {
   right: 10px;
   margin-top: 50px;
   color: white;
+  text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
   font-size: 30px;
   cursor: pointer;
   z-index: 10000;
