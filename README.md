@@ -39,8 +39,8 @@ Seven Generous Website adalah situs HTML statis yang menampilkan informasi penti
 
 ## Struktur Proyek
 
-seven-generous-website/ ├── index.html          # Halaman utama website ├── style.css           # File styling utama ├── /images/            # Folder opsional untuk gambar (jika tidak pakai CDN) ├── README.md           # Dokumentasi proyek (file ini) └── favicon.png         # Ikon website (jika disimpan lokal)
-
+seven-generous-website/ 
+├── index.html          # Halaman utama website ├── style.css           # File styling utama ├── README.md           # Dokumentasi proyek 
 ---
 
 ## Cara Menggunakan
